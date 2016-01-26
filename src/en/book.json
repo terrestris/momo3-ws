@@ -1,0 +1,30 @@
+{
+  "gitbook": "^2.3.0",
+  "variables": {
+    "workshopName": "Introduction to core technologies behind the MoMo geoportal",
+    "workshopUrl": "http://localhost:4000",
+    "authors": [{
+      "name": "Marc Jansen",
+      "mail": "jansen@terrestris.de"
+    }, {
+      "name": "Daniel Koch",
+      "mail": "koch@terrestris.de"
+    }]
+  },
+  "links": {
+    "sidebar": {
+      "Select language…": "/"
+    }
+  },
+  "plugins": [
+    "image-captions"
+  ],
+  "pluginsConfig": {
+    "image-captions": {
+      "caption": "_CAPTION_"
+    }
+  },
+  "styles": {
+    "website": "style.css"
+  }
+}
