@@ -34,7 +34,6 @@
   },
   "homepage": "https://github.com/terrestris/momo3-ws#readme",
   "devDependencies": {
-    "gh-pages": "^0.4.0",
     "gitbook-cli": "^0.3.6",
     "gitbook-plugin-image-captions": "^0.1.0"
   }
