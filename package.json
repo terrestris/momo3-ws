@@ -1,0 +1,41 @@
+{
+  "name": "momo3-ws",
+  "private": true,
+  "version": "0.0.1",
+  "description": "The materials for the workshop in Mongolia (2016)",
+  "scripts": {
+    "start": "mkdir -p src/_book && npm run doc:serve",
+    "test": "npm run build",
+    "clean": "rm -rf src/_book build",
+    "doc:help": "gitbook help",
+    "doc:serve": "gitbook serve src",
+    "doc:build": "gitbook build src build/momo3-ws",
+    "doc:epub": "gitbook epub src build/momo3-ws.epub",
+    "doc:pdf": "gitbook pdf src build/momo3-ws.pdf",
+    "build": "npm run clean && npm run doc:build && npm run doc:pdf && npm run doc:epub",
+    "archive": "npm run build && cp src/README.md build/momo3-ws && cd build && zip -r momo3-ws.zip momo3-ws momo3-ws.pdf momo3-ws.epub"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrestris/momo3-ws.git"
+  },
+  "keywords": [
+    "workshop",
+    "openlayers",
+    "geoserver",
+    "geoext",
+    "extjs",
+    "javascript"
+  ],
+  "author": "terrestris GmbH & Co.KG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terrestris/momo3-ws/issues"
+  },
+  "homepage": "https://github.com/terrestris/momo3-ws#readme",
+  "devDependencies": {
+    "gh-pages": "^0.4.0",
+    "gitbook-cli": "^0.3.6",
+    "gitbook-plugin-image-captions": "^0.1.0"
+  }
+}
