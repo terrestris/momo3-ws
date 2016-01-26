@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - "4"
+
+cache:
+  directories:
+  - $HOME/calibre-bin
+
+sudo: false
+
+before_script:
+  - 'wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)"'
+
+script:
+  - calibre --version
+  - npm test
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
