@@ -1,3 +1,7 @@
+*.log
+
 /build/
 /node_modules/
 /src/_book/
+
+/src/*/node_modules/
