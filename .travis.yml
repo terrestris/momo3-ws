@@ -10,13 +10,13 @@ cache:
 sudo: false
 
 before_script:
+  - export PATH=$PATH:$HOME/calibre-bin/calibre
   - >
+    which calibre ||
     wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py |
     python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)"
-  - export PATH=$PATH:$HOME/calibre-bin/calibre
 
 script:
-  - calibre --version
   - npm test
 
 notifications:
