@@ -41,7 +41,18 @@ git clone --branch $GH_PAGES_BRANCH $GH_PAGES_REPO $GH_PAGES_DIR
 
 cd $GH_PAGES_DIR
 
-echo "peter" >> index.html
+# the src directory containg the build artifacts
+SRC_DIR=$TRAVIS_BUILD_DIR/build
+
+# cleanup existing resources
+rm -Rf *.zip *.pdf *.epub *.html *.json *.jpg mn/ en/ gitbook/
+
+# copy the src dir from previous build folder
+cp -r $SRC_DIR/momo3-ws/* .
+
+cp $SRC_DIR/*.pdf .
+cp $SRC_DIR/*.epub .
+cp $SRC_DIR/*.zip .
 
 git add .
 git commit -m "$GH_PAGES_COMMIT_MSG"
