@@ -1,31 +1,23 @@
 language: node_js
-
 node_js:
   - "4.0"
-
+env:
+  global:
+    secure: "cyTGV2o6Tio2SaXTW4PKDLBD/fLmP9RR9oJuwAH0s6cIGKXkdzlroyiqQsKxII5Un7Rhw7Y7ayQGe0cLH0sDEXzIkWF4BhSvWJJTHv2DM7DbDKbfPwXJ/UgCN298emGPXxixWpI1t1vjzZeVosOVDIisONg9GdMcl42wrTL0dyuSDI2GfLuE3DD/Ktm0eQpHLbJJS7peWGH8JOClOKOBb2yY7aqYbb9vgXRaiGafuJed+yqtOUbgkV4D1Jtas8tZCllej76rZobZT33oWsQvoYqLz8afQBkmhVEcwJDfiFhxiS38hA/yqSXXiUCzU8KJHT1ibGqfmMduBFkZ7f4vjXpSEENh0tn0JkX5ZuZcT7TunpogrkQfeHKjkq4Kc4rb+pIM9mAmNjbnj+l5gkJsm+vjFse/vaGapMz9CabFFUHvkAl3pXLoAKUOj1d8oTVPpUCJs57G1gEcoioi+d2Xx7QpvjldbVRISVAb1a3Frrb1rEDcB/Zh06f3aagoR/GXQyg/jeehDp+ViFoa9xUq3up7yvNvHnb4oOdmv6y3v2bs12AsdaG2dSNHN9v8sOQmcJPM1250b5kkoypXxD+eKpCRqhhQ7KzxNPzKkQh25qvBVQqXfCNQ33gXPGtsnZsxwkKbRFl61e0c0fRN6LFt7mXvqOLTA8M2+NvCUwdpBBo="
 cache:
   directories:
   - $HOME/calibre-bin
-
 sudo: false
-
-env:
-  global:
-  - secure: jMMfEa/sbsBL/xYvawEXc9GEciPDBABU9k/YtVmi+YA6lh5fIqttvFKomUgZcbYKMX2mADEcOc3SpTR5v5vOj4khQt7jmdmzY91nFD8PKR5AEGEN6wwtH8i0gzyKB+wvN2wxFNk2XcYBQRl13+reYf+bo7h9wdgiEJquysymmQSMpVFjO/pkkmfn8++gK4NVIJXiV4zCCrkP97+m+xWTJ2Sy8oD3cNh80MnvZBtG8t7kg9XpDImdcfdeWyR46G7QwWancePqS4gG03bu5+Upy1L6Hs0/SK/btkQDCSpLRFiMx2fayPUgejWzF3fO6lwD46OQi9pD1h8o6xaWmaSmZO/zhRQksONXANGHsRmJxoOCgEfVSgL/HioeATStvCxnpLOQk/HbwLPZYN3LEcVwHIBuBwvM1el6pA/IkwTKcHcJMBmYPhqZWLFmVlww6lFXqsXZtXrRE98iQ+fEggnP2cBBp8SH9s3QV6ypR9x/ohhc/xt0hcQ5yKeKjdcJyk+cDWkKNoEhymMCYwa+hSw3hY43fXHuW5ShiXcKVRpElVYB2lrt0C7ZATptSHxruCx3eT9E/xE7xie6+uEg9zdtlfHygCtOCu0uMFuR7se6vtGv+lxSbYfAm3rWDSIWgLFqhixN1K0wIiT2gM2WCWl6JjVwWA/pDwJL4QETTfMVGbE=
-
 before_script:
   - export PATH=$PATH:$HOME/calibre-bin/calibre
   - >
     which calibre ||
     wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py |
     python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)"
-
 script:
   - npm test
-
 after_success:
-  - ./.ci/update-gh-pages.sh > /dev/null 2>&1
-
+  - ./.ci/update-gh-pages.sh
 notifications:
   email:
     on_success: never
