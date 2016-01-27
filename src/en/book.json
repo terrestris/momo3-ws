@@ -5,7 +5,10 @@
   "language": "en",
   "variables": {
     "workshopName": "Introduction to core technologies behind the MoMo geoportal",
-    "workshopUrl": "http://localhost:4000",
+    "workshopUrl": "http://terrestris.github.io/momo3-ws/",
+    "workshopDownloadUrl": "http://terrestris.github.io/momo3-ws/momo3-ws.zip",
+    "workshopPdfUrl": "http://terrestris.github.io/momo3-ws/momo3-ws_en.pdf",
+    "workshopEpubUrl": "http://terrestris.github.io/momo3-ws/momo3-ws_en.epub",
     "authors": [{
       "name": "Marc Jansen",
       "mail": "jansen@terrestris.de"
