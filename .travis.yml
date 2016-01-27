@@ -15,7 +15,7 @@ before_script:
     wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py |
     python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)"
 script:
-  - npm test
+  - npm run archive
 after_success:
   - ./.ci/update-gh-pages.sh > /dev/null 2>&1
 notifications:
