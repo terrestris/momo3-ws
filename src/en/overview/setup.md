@@ -13,6 +13,7 @@ by terrestris
             * /home/momo-ws published under URL http://localhost:80/momo-ws
         * Apache Tomcat 8
             * http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz
+            * remember to put it into the autostart
         * GeoServer 2.8.2
             * http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/geoserver-2.8.2-war.zip
             * Plugins:
@@ -28,6 +29,7 @@ by terrestris
         * Chrome
             * https://www.google.com/chrome/browser/desktop/index.html
         * PostgreSQL / PostGIS
+          * Remember to put these into the autostart
         * git
         * nvm
             * https://github.com/creationix/nvm
