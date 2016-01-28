@@ -1,9 +1,8 @@
 # Summary
 
 * [Overview](overview/README.md)
-
-* [Day One: 2016-02-22](geoserver/README.md)
-
+    * [Setup](overview/setup.md)
+* [GeoServer](geoserver/README.md)
 * [JavaScript](javascript/README.md)
     * [Beginners](javascript/beginners/README.md)
         * [Basics](javascript/beginners/basics/README.md)
@@ -44,37 +43,29 @@
             * [Enumeration](javascript/beginners/objects/enumeration.md)
             * [Global footprint](javascript/beginners/objects/global_footprint.md)
     * [Advanced](javascript/advanced/README.md)
-
 * [OpenLayers](openlayers/ol3/src/README.md)
     * [Basics](openlayers/ol3/src/basics/README.md)
       * [Creating a map](openlayers/ol3/src/basics/map.md)
       * [Dissecting your map](openlayers/ol3/src/basics/dissect.md)
       * [Resources](openlayers/ol3/src/basics/resources.md)
-
     * [Layers and Sources](openlayers/ol3/src/layers/README.md)
       * [WMS sources](openlayers/ol3/src/layers/wms.md)
       * [Tiled sources](openlayers/ol3/src/layers/cached.md)
       * [Proprietary tile providers](openlayers/ol3/src/layers/proprietary.md)
       * [Vector data](openlayers/ol3/src/layers/vector.md)
       * [Image vector source](openlayers/ol3/src/layers/imagevector.md)
-
     * [Controls](openlayers/ol3/src/controls/README.md)
       * [Scale line control](openlayers/ol3/src/controls/scaleline.md)
       * [Select interaction](openlayers/ol3/src/controls/select.md)
       * [Draw interaction](openlayers/ol3/src/controls/draw.md)
       * [Modify interaction](openlayers/ol3/src/controls/modify.md)
-
     * [Vector Topics](openlayers/ol3/src/vector/README.md)
       * [Formats](openlayers/ol3/src/vector/formats.md)
       * [Styling concepts](openlayers/ol3/src/vector/style-intro.md)
       * [Custom styles](openlayers/ol3/src/vector/style.md)  
-
     * [Custom Builds](openlayers/ol3/src/custom-builds/README.md)
       * [Concepts](openlayers/ol3/src/custom-builds/concepts.md)
       * [Create custom builds](openlayers/ol3/src/custom-builds/create.md)
-
-* Day Four: 2016-02-25
-  * [Part 1](extjs/README.md)
-  * [Part 2](geoext/README.md)
-
-* [Day Five: 2016-02-26](wrap-up/README.md)
+* [ExtJS](extjs/README.md)
+* [GeoExt](geoext/README.md)
+* [Synopsis](wrap-up/README.md)
