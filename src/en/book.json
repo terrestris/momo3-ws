@@ -23,6 +23,7 @@
     }
   },
   "plugins": [
+    "exercises",
     "image-captions"
   ],
   "pluginsConfig": {

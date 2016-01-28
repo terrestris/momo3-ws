@@ -1,0 +1,3 @@
+[submodule "src/en/javascript/beginners"]
+	path = src/en/javascript/beginners
+	url = https://github.com/GitbookIO/javascript.git
