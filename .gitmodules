@@ -1,3 +1,6 @@
 [submodule "src/en/javascript/beginners"]
 	path = src/en/javascript/beginners
 	url = https://github.com/GitbookIO/javascript.git
+[submodule "src/en/openlayers/ol3"]
+	path = src/en/openlayers/ol3
+	url = https://github.com/openlayers/workshop.git
