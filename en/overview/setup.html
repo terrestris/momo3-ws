@@ -61,7 +61,7 @@
         data-chapter-title="Setup"
         data-filepath="overview/setup.md"
         data-basepath=".."
-        data-revision="Thu Jan 28 2016 14:04:28 GMT+0000 (UTC)"
+        data-revision="Thu Jan 28 2016 15:39:48 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -1257,16 +1257,24 @@
 <ul>
 <li>This workshops requires a Live Disk, lives on an USB stick, will be provided
   by terrestris</li>
-<li>Based on Linux Mint <a href="http://blog.linuxmint.com/?p=2947" target="_blank">17.3 Cinnamon Edition</a> 32bit</li>
+<li>Based on Linux Mint <a href="http://blog.linuxmint.com/?p=2947" target="_blank">17.3 Cinnamon Edition</a> 32bit<ul>
+<li>username: <code>momo-ws</code></li>
+<li>password: <code>momo-ws</code></li>
+</ul>
+</li>
 <li>Contents:<ul>
-<li>Software:<ul>
+<li>Software (additionally installed):<ul>
 <li>Oracle Java 8<ul>
 <li><a href="http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html" target="_blank">http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html</a></li>
 </ul>
 </li>
-<li>Apache</li>
+<li>Apache 2<ul>
+<li>/home/momo-ws published under URL <a href="http://localhost:80/momo-ws" target="_blank">http://localhost:80/momo-ws</a></li>
+</ul>
+</li>
 <li>Apache Tomcat 8<ul>
 <li><a href="http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz" target="_blank">http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz</a></li>
+<li>remember to put it into the autostart</li>
 </ul>
 </li>
 <li>GeoServer 2.8.2<ul>
@@ -1276,6 +1284,10 @@
 <li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-wps-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-wps-plugin.zip</a></li>
 <li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-oracle-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-oracle-plugin.zip</a></li>
 <li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-importer-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-importer-plugin.zip</a></li>
+</ul>
+</li>
+<li>published via Apache 2 on port 80<ul>
+<li><a href="http://localhost:80/geoserver" target="_blank">http://localhost:80/geoserver</a> pointing to <a href="http://localhost:80/geoserver" target="_blank">http://localhost:80/geoserver</a></li>
 </ul>
 </li>
 </ul>
@@ -1289,7 +1301,10 @@
 <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">https://www.google.com/chrome/browser/desktop/index.html</a></li>
 </ul>
 </li>
-<li>PostgreSQL / PostGIS</li>
+<li>PostgreSQL / PostGIS<ul>
+<li>Remember to put these into the autostart</li>
+</ul>
+</li>
 <li>git</li>
 <li>nvm<ul>
 <li><a href="https://github.com/creationix/nvm" target="_blank">https://github.com/creationix/nvm</a></li>
@@ -1306,23 +1321,36 @@
 <li>GDAL/ogr2ogr</li>
 </ul>
 </li>
-<li>Data:<ul>
-<li>Natural Earth<ul>
-<li><a href="http://www.naturalearthdata.com/downloads/" target="_blank">http://www.naturalearthdata.com/downloads/</a></li>
-</ul>
-</li>
-<li>OSM sample export mongolia<ul>
-<li><a href="http://download.geofabrik.de/asia/mongolia-160101.shp.zip" target="_blank">http://download.geofabrik.de/asia/mongolia-160101.shp.zip</a></li>
-</ul>
-</li>
-<li>GADM gloabl admistrative dataset<ul>
-<li><a href="http://biogeo.ucdavis.edu/data/gadm2.8/gadm28.shp.zip" target="_blank">http://biogeo.ucdavis.edu/data/gadm2.8/gadm28.shp.zip</a></li>
+<li>Software (other tasks)</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
+<pre><code class="lang-bash"><span class="hljs-comment"># remove unneeded packages</span>
+sudo apt-get remove thunderbird vlc vlc-plugin-notify vlc-plugin-pulse \
+    vlc-data vlc-nox totem-common brasero banshee gimp hexchat pidgin totem \
+    seahorse cowsay mint-backgrounds-qiana mint-backgrounds-rafaela \
+    mint-backgrounds-rebecca mint-backgrounds-rosa sox ttf-indic-fonts-core \
+    ttf-punjabi-fonts ttf-wqy-microhei fonts-kacst fonts-kacst-one \
+    fonts-khmeros-core fonts-lao fonts-lklug-sinhala fonts-thai-tlwg \
+    fonts-tibetan-machine fonts-tlwg-garuda fonts-tlwg-kinnari fonts-tlwg-loma \
+    fonts-tlwg-norasi fonts-tlwg-purisa fonts-tlwg-sawasdee fonts-wqy-microhe \
+    fonts-noto fonts-sil-abyssinica fonts-sil-padauk fonts-takao-pgothic \
+    fonts-tlwg-umpush fonts-tlwg-waree gimp-help-en firefox firefox-locale-en \
+    simple-scan transmission-common transmission-gtk mintwelcome
+<span class="hljs-comment"># remove remaining dependencies no longer needed</span>
+sudo apt-get autoremove
+<span class="hljs-comment"># now update and upgrade</span>
+sudo apt-get -y update &amp;&amp; sudo apt-get -y upgrade
+</code></pre>
+<pre><code class="lang-undefined">* Data:
+    * Natural Earth
+        * http://www.naturalearthdata.com/downloads/
+    * OSM sample export mongolia
+        * http://download.geofabrik.de/asia/mongolia-160101.shp.zip
+    * GADM gloabl admistrative dataset
+        * http://biogeo.ucdavis.edu/data/gadm2.8/gadm28.shp.zip
+</code></pre>
+<ul>
 <li>Setup:<ul>
 <li>Language: English</li>
 <li>Set keyboard layout</li>
