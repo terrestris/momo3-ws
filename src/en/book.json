@@ -24,7 +24,8 @@
   },
   "plugins": [
     "exercises",
-    "image-captions"
+    "image-captions",
+    "advanced-emoji"
   ],
   "pluginsConfig": {
     "image-captions": {
