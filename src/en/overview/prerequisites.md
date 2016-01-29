@@ -14,7 +14,7 @@ this image (and the workshop) please follow these steps:
 
 **Note:** If your computer isn't booting Linux Mint, please ensure your PC is
 able and correctly configured to boot from an USB device. To do so, access your
-BIOS by pressing `<DEL>` or `F2` during the early boot process (usually you will
+BIOS by pressing `DEL` or `F2` during the early boot process (usually you will
 see the correct key displayed on-screen during the boot process). Press the
 required key at the correct time and your computer's BIOS will appear. Once
 you're in the BIOS, try to find a menu called something like `Boot` or similar.
