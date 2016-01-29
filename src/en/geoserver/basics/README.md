@@ -1,6 +1,8 @@
 # GeoServer Basics
 
-GeoServer is an open, Java-based server that enables publishing and editing of
-spatial data based on the standards of the Open Geospatial Consortium (OGC) (here
-esp. WMS and WFS). A particular strength of GeoServer is the flexibility by
-which it can be expanded to include additional functionality.
+In this section we'll learn how to deal with the most common use cases when
+working with the GeoServer: Manage the running GeoServer instance by adjusting
+the most important configuration settings and publishing geospatial data.
+
+* [Administration settings](./administration/README.md)
+* [Publishing geospatial data](./publishing/README.md)
