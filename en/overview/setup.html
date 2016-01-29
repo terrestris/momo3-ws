@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        
+    
+        
         <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
         
     
@@ -48,7 +52,7 @@
     <link rel="next" href="../geoserver/index.html" />
     
     
-    <link rel="prev" href="../overview/index.html" />
+    <link rel="prev" href="../overview/references.html" />
     
 
         
@@ -57,11 +61,11 @@
         
         
     <div class="book"
-        data-level="1.1"
+        data-level="1.3"
         data-chapter-title="Setup"
         data-filepath="overview/setup.md"
         data-basepath=".."
-        data-revision="Thu Jan 28 2016 15:39:48 GMT+0000 (UTC)"
+        data-revision="Fri Jan 29 2016 10:53:14 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -113,14 +117,44 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1" data-path="overview/setup.html">
+        <li class="chapter " data-level="1.1" data-path="overview/prerequisites.html">
+            
+                
+                    <a href="../overview/prerequisites.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Prerequisites
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="overview/references.html">
+            
+                
+                    <a href="../overview/references.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="overview/setup.html">
             
                 
                     <a href="../overview/setup.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>1.1.</b>
+                            <b>1.3.</b>
                         
                         Setup
                     </a>
@@ -1253,80 +1287,83 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="setup">Setup</h1>
+                        <h1 id="workshop-linux-mint-setup">Workshop Linux Mint Setup</h1>
+<p>The provided workshop Linux image is just a Linux Mint with pre-installed and
+configured programs and tools. This page lists the changes to the default system
+configuration only and is no integral part of the workshop.</p>
 <ul>
-<li>This workshops requires a Live Disk, lives on an USB stick, will be provided
-  by terrestris</li>
-<li>Based on Linux Mint <a href="http://blog.linuxmint.com/?p=2947" target="_blank">17.3 Cinnamon Edition</a> 32bit<ul>
-<li>username: <code>momo-ws</code></li>
-<li>password: <code>momo-ws</code></li>
+<li>Operating system:<ul>
+<li>Linux Mint <a href="http://blog.linuxmint.com/?p=2947" target="_blank">17.3 Cinnamon Edition</a> (32bit)</li>
 </ul>
 </li>
-<li>Contents:<ul>
-<li>Software (additionally installed):<ul>
-<li>Oracle Java 8<ul>
-<li><a href="http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html" target="_blank">http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html</a></li>
+<li>Additionally installed software:<ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html" target="_blank">Oracle Java 8</a><ul>
+<li>Installed from <a href="http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html" target="_blank">here</a></li>
 </ul>
 </li>
-<li>Apache 2<ul>
-<li>/home/momo-ws published under URL <a href="http://localhost:80/momo-ws" target="_blank">http://localhost:80/momo-ws</a></li>
+<li><a href="https://httpd.apache.org/" target="_blank">Apache 2</a><ul>
+<li>Installed from package manager</li>
+<li>Linked home directory <code>/home/momo-ws</code> to <a href="http://localhost:80/momo-ws" target="_blank">http://localhost:80/momo-ws</a></li>
+<li>Added to autostart</li>
 </ul>
 </li>
-<li>Apache Tomcat 8<ul>
-<li><a href="http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz" target="_blank">http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz</a></li>
-<li>remember to put it into the autostart</li>
+<li><a href="https://tomcat.apache.org/download-80.cgi" target="_blank">Apache Tomcat 8</a><ul>
+<li>Installed from <a href="http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz" target="_blank">here</a></li>
+<li>Added to autostart</li>
 </ul>
 </li>
-<li>GeoServer 2.8.2<ul>
-<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/geoserver-2.8.2-war.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/geoserver-2.8.2-war.zip</a></li>
-<li>Plugins:<ul>
-<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-pyramid-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-pyramid-plugin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-wps-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-wps-plugin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-oracle-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-oracle-plugin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-importer-plugin.zip" target="_blank">http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-importer-plugin.zip</a></li>
+<li><a href="http://geoserver.org/release/stable/" target="_blank">GeoServer 2.8.2</a><ul>
+<li>Installed from <a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/geoserver-2.8.2-war.zip" target="_blank">here</a></li>
+<li>Installed plugins:<ul>
+<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-pyramid-plugin.zip" target="_blank">pyramid-plugin</a></li>
+<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-wps-plugin.zip" target="_blank">wps-plugin</a></li>
+<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-oracle-plugin.zip" target="_blank">oracle-plugin</a></li>
+<li><a href="http://sourceforge.net/projects/geoserver/files/GeoServer/2.8.2/extensions/geoserver-2.8.2-importer-plugin.zip" target="_blank">importer-plugin</a></li>
 </ul>
 </li>
-<li>published via Apache 2 on port 80<ul>
-<li><a href="http://localhost:80/geoserver" target="_blank">http://localhost:80/geoserver</a> pointing to <a href="http://localhost:80/geoserver" target="_blank">http://localhost:80/geoserver</a></li>
+<li>Published via Apache 2 on port 80<ul>
+<li><a href="http://localhost:80/geoserver" target="_blank">http://localhost:80/geoserver</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Atom Editor<ul>
-<li><a href="http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html" target="_blank">http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html</a></li>
-<li>list additional plugins (TODO MJ)</li>
+<li><a href="https://atom.io/" target="_blank">Atom Editor</a><ul>
+<li>Installed from <a href="http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html" target="_blank">here</a></li>
+<li><img align="absmiddle" alt=":bangbang:" class="emoji" src="../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/bangbang.png" title=":bangbang:"> MJ list additional plugins</li>
 </ul>
 </li>
-<li>Chrome<ul>
-<li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">https://www.google.com/chrome/browser/desktop/index.html</a></li>
+<li><a href="https://www.google.de/chrome/browser/desktop/" target="_blank">Chrome</a><ul>
+<li>Installed from <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">here</a></li>
 </ul>
 </li>
-<li>PostgreSQL / PostGIS<ul>
-<li>Remember to put these into the autostart</li>
+<li><a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> / <a href="http://postgis.net/" target="_blank">PostGIS</a><ul>
+<li>Installed from package manager</li>
+<li>Added to autostart</li>
 </ul>
 </li>
-<li>git</li>
-<li>nvm<ul>
-<li><a href="https://github.com/creationix/nvm" target="_blank">https://github.com/creationix/nvm</a></li>
+<li><a href="https://git-scm.com/" target="_blank">git</a><ul>
+<li>Installed from package manager</li>
 </ul>
 </li>
-<li>bash-git-prompt<ul>
-<li><a href="https://github.com/magicmonty/bash-git-prompt" target="_blank">https://github.com/magicmonty/bash-git-prompt</a></li>
+<li><a href="https://github.com/creationix/nvm" target="_blank">nvm</a><ul>
+<li>Installed from <a href="https://github.com/creationix/nvm" target="_blank">here</a></li>
 </ul>
 </li>
-<li>QGIS<ul>
-<li><a href="https://www.qgis.org/de/site/forusers/alldownloads.html#debian-ubuntu" target="_blank">https://www.qgis.org/de/site/forusers/alldownloads.html#debian-ubuntu</a></li>
+<li><a href="https://github.com/magicmonty/bash-git-prompt" target="_blank">bash-git-prompt</a><ul>
+<li>Installed from <a href="https://github.com/magicmonty/bash-git-prompt" target="_blank">here</a></li>
 </ul>
 </li>
-<li>GDAL/ogr2ogr</li>
+<li><a href="http://www.qgis.org/" target="_blank">QGIS</a><ul>
+<li>Installed from <a href="https://www.qgis.org/de/site/forusers/alldownloads.html#debian-ubuntu" target="_blank">here</a></li>
 </ul>
 </li>
-<li>Software (other tasks)</li>
+<li><a href="http://www.gdal.org/" target="_blank">GDAL</a><ul>
+<li>Installed from package manager</li>
 </ul>
 </li>
 </ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># remove unneeded packages</span>
-sudo apt-get remove thunderbird vlc vlc-plugin-notify vlc-plugin-pulse \
+</li>
+<li>Removed packages:<pre><code class="lang-bash">  $ sudo apt-get remove thunderbird vlc vlc-plugin-notify vlc-plugin-pulse \
     vlc-data vlc-nox totem-common brasero banshee gimp hexchat pidgin totem \
     seahorse cowsay mint-backgrounds-qiana mint-backgrounds-rafaela \
     mint-backgrounds-rebecca mint-backgrounds-rosa sox ttf-indic-fonts-core \
@@ -1337,23 +1374,18 @@ sudo apt-get remove thunderbird vlc vlc-plugin-notify vlc-plugin-pulse \
     fonts-noto fonts-sil-abyssinica fonts-sil-padauk fonts-takao-pgothic \
     fonts-tlwg-umpush fonts-tlwg-waree gimp-help-en firefox firefox-locale-en \
     simple-scan transmission-common transmission-gtk mintwelcome
-<span class="hljs-comment"># remove remaining dependencies no longer needed</span>
-sudo apt-get autoremove
-<span class="hljs-comment"># now update and upgrade</span>
-sudo apt-get -y update &amp;&amp; sudo apt-get -y upgrade
 </code></pre>
-<pre><code class="lang-undefined">* Data:
-    * Natural Earth
-        * http://www.naturalearthdata.com/downloads/
-    * OSM sample export mongolia
-        * http://download.geofabrik.de/asia/mongolia-160101.shp.zip
-    * GADM gloabl admistrative dataset
-        * http://biogeo.ucdavis.edu/data/gadm2.8/gadm28.shp.zip
+</li>
+<li>Removed remaining dependencies no longer needed<pre><code class="lang-bash">  $ sudo apt-get autoremove
 </code></pre>
-<ul>
-<li>Setup:<ul>
-<li>Language: English</li>
-<li>Set keyboard layout</li>
+</li>
+<li>Updated and upgraded packges to latest version<pre><code class="lang-bash">  $ sudo apt-get -y update &amp;&amp; sudo apt-get -y upgrade
+</code></pre>
+</li>
+<li>Data used in the workshop:<ul>
+<li><a href="http://www.naturalearthdata.com/downloads/" target="_blank">Natural Earth</a></li>
+<li><a href="http://download.geofabrik.de/asia/mongolia-160101.shp.zip" target="_blank">OSM sample export Mongolia</a></li>
+<li><a href="http://biogeo.ucdavis.edu/data/gadm2.8/gadm28.shp.zip" target="_blank">GADM global admistrative dataset</a></li>
 </ul>
 </li>
 </ul>
@@ -1367,7 +1399,7 @@ sudo apt-get -y update &amp;&amp; sudo apt-get -y upgrade
         </div>
 
         
-        <a href="../overview/index.html" class="navigation navigation-prev " aria-label="Previous page: Overview"><i class="fa fa-angle-left"></i></a>
+        <a href="../overview/references.html" class="navigation navigation-prev " aria-label="Previous page: References"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../geoserver/index.html" class="navigation navigation-next " aria-label="Next page: GeoServer"><i class="fa fa-angle-right"></i></a>
@@ -1395,10 +1427,6 @@ sudo apt-get -y update &amp;&amp; sudo apt-get -y upgrade
     
 
     
-    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
@@ -1410,9 +1438,13 @@ sudo apt-get -y update &amp;&amp; sudo apt-get -y upgrade
     <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
     
 
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"exercises":{}};
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"exercises":{},"advanced-emoji":{"myConfigKey":"test"}};
     gitbook.start(config);
 });
 </script>
