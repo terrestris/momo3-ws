@@ -1,6 +1,8 @@
 # Summary
 
 * [Overview](overview/README.md)
+    * [Prerequisites](overview/prerequisites.md)
+    * [References](overview/references.md)
     * [Setup](overview/setup.md)
 * [GeoServer](geoserver/README.md)
 * [JavaScript](javascript/README.md)
