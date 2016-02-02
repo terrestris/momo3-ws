@@ -7,8 +7,6 @@ configuration only and is no integral part of the workshop.
 * Operating system:
     * Linux Mint [17.3 Cinnamon Edition](http://blog.linuxmint.com/?p=2947) (32bit)
 * Additionally installed software:
-    * [Oracle Java 8](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
-        * Installed from [here](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
     * [Apache 2](https://httpd.apache.org/)
         * Installed from package manager
         * Linked home directory `/home/momo-ws` to [http://localhost:80/momo-ws](http://localhost:80/momo-ws)
@@ -67,6 +65,14 @@ $ sudo apt-get -y update && sudo apt-get -y upgrade
 ```
 
 * Data used in the workshop:
-    * [Natural Earth](http://www.naturalearthdata.com/downloads/)
-    * [OSM sample export Mongolia](http://download.geofabrik.de/asia/mongolia-160101.shp.zip)
-    * [GADM global admistrative dataset](http://biogeo.ucdavis.edu/data/gadm2.8/gadm28.shp.zip)
+    * Natural Earth Large scale data, 1:10m
+        * Cultural
+            * Download [here](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/10m_cultural.zip)
+        * Physical
+            * Download [here](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/10m_physical.zip)
+        * Raster (Ocean bottom)
+            * Download [here](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/raster/OB_LR.zip)
+        * Extracted to `~/materials/natural_earth`
+    * OSM sample export Mongolia
+        * Download [here](http://download.geofabrik.de/asia/mongolia-160101.shp.zip)
+        * Extracted to `~/materials/osm_mongolia`
