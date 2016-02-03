@@ -9,7 +9,7 @@ configuration only and is no integral part of the workshop.
 * Additionally installed software:
     * [Apache 2](https://httpd.apache.org/)
         * Installed from package manager
-        * Linked home directory `/home/momo-ws` to [http://localhost:80/momo-ws](http://localhost:80/momo-ws)
+        * Linked home directory `/home/momo-ws` to [http://localhost:80/momo](http://localhost:80/momo)
         * Added to autostart
     * [Apache Tomcat 8](https://tomcat.apache.org/download-80.cgi)
         * Installed from [here](http://apache.mirror.digionline.de/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz)
