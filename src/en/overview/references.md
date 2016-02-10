@@ -17,7 +17,7 @@ Here you will find some useful informations about the workshop image.
 ## Useful paths
 
 * Your home directory: `/home/momo3-ws`
-* Workshop directory: `/home/momo3-ws/workshop-materials`
+* Workshop directory: `/home/momo3-ws/materials`
 * Tomcat webapp directory: `/var/lib/tomcat8/webapps`
 
 ## Useful terminal commands
