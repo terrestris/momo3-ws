@@ -13,7 +13,7 @@
     "doc:epub": "gitbook epub src build/momo3-ws.epub",
     "doc:pdf": "gitbook pdf src build/momo3-ws.pdf",
     "postinstall": "gitbook install src/en && gitbook install src/mn",
-    "build": "npm run clean && npm run doc:build && npm run doc:pdf && npm run doc:epub",
+    "build": "npm run clean && npm run doc:build && npm run doc:pdf && npm run doc:epub && cd build/momo3-ws && tar -cvzf en/extjs/materials.tar.gz -C en/extjs/ materials/",
     "archive": "npm run build && cd build && zip -r momo3-ws.zip momo3-ws momo3-ws_*.pdf momo3-ws_*.epub"
   },
   "repository": {
@@ -34,7 +34,7 @@
     "url": "https://github.com/terrestris/momo3-ws/issues"
   },
   "homepage": "https://github.com/terrestris/momo3-ws#readme",
-  "devDependencies": {
-    "gitbook-cli": "0.3.6"
+  "dependencies": {
+    "gitbook-cli": "1.0.1"
   }
 }

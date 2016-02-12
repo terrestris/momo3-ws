@@ -1,23 +1,20 @@
-# ExtJS
+# Ext JS Workshop
 
-* Introduction
-* Hello ExtJS
-  * include resources
-  * Create a window in Ext.onReady()
-  * Where to find docs...
-* Layouts
-  * Start with 1 Panel in a viewport (layout default: 'auto')
-    * explain Viewport and 3 configs of Panel
-  * Add more panels to the viewport (still auto layout)
-    * show that the result is't what we really wanted
-  * go to the layout browser example and pick two which you Linked
-  * In the end we need to have the 'border-layout' (with panels in north, center, west, east, south)
-* Components
-  * start with the final example from Layouts
-    * tabpanel in the center
-  * Use img component in header
-  * use basic form in east
-  * use basic grid (local data) in south
-  * use basic tree in west
-* Next add behaviour
-  * events, remote data / AJAX, filtering???
+Welcome to the **Ext JS Workshop**. This workshop is designed to deliver you a
+first insight into the JavaScript framework Ext JS for developing web
+applications. As this workshop is further intended for beginners we'll mainly
+focus on the core concepts and components delivered by Ext JS by simple tasks.
+Hence we'll learn how to include the framework into a basic HTML page, how to
+use the `Viewport`, what user interface components Ext JS provides to us and how
+to programmatically interact with these components.
+
+These goals are subdivided into the following sets of modules:
+
+* [Introduction to Ext JS](./introduction/README.md)
+* [Basics](./basics/README.md)
+* [Layouts](./layouts/README.md)
+* [Components](./components/README.md)
+* [Data](./data/README.md)
+* [Events](./events/README.md)
+
+Let's start with the [introduction to Ext JS](./introduction/README.md)!

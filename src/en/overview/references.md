@@ -52,8 +52,8 @@ most helpful terminal commands used in this workshop.
 
 ### Compress and extract
 
-* Create an archive: `$ tar cvzf {FILE_PATH_AND_NAME}.tar.gz`
-* Extract an archive: `$ tar xvzf {FILE_PATH_AND_NAME}.tar.gz`
+* Create an archive: `$ tar -cvzf {ARCHIVE_FILE_NAME}.tar.gz {DIRECTORY_TO_ARCHIVE}`
+* Extract an archive: `$ tar -xvzf {ARCHIVE_FILE_NAME}.tar.gz`
 
 ### Services
 
