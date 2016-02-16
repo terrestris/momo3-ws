@@ -10,6 +10,10 @@
     "workshopPdfUrl": "http://terrestris.github.io/momo3-ws/momo3-ws_en.pdf",
     "workshopEpubUrl": "http://terrestris.github.io/momo3-ws/momo3-ws_en.epub",
     "geoServerBaseUrl": "http://localhost/geoserver",
+    "extWorkshopMaterialsUrl": "http://terrestris.github.io/momo3-ws/en/extjs/materials.tar.gz",
+    "extWorkshopMaterialsFileName": "materials.tar.gz",
+    "extWorkshopFolderName": "ext-workshop",
+    "extWorkshopUrl": "http://0.0.0.0:8000",
     "authors": [{
       "name": "Marc Jansen",
       "mail": "jansen@terrestris.de"
@@ -27,7 +31,8 @@
     "exercises",
     "image-captions",
     "advanced-emoji",
-    "expandable-chapters"
+    "expandable-chapters",
+    "include-codeblock"
   ],
   "pluginsConfig": {
     "image-captions": {

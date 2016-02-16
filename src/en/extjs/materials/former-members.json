@@ -1,0 +1,27 @@
+{
+    "data": [{
+        "firstName": "Malcolm",
+        "lastName": "Young",
+        "instruments": "Guitar, vocals, bass guitar"
+    }, {
+        "firstName": "Dave",
+        "lastName": "Evans",
+        "instruments": "Vocals"
+    }, {
+        "firstName": "Bon",
+        "lastName": "Scott",
+        "instruments": "Vocals"
+    }, {
+        "firstName": "Mark",
+        "lastName": "Evans",
+        "instruments": "Bass guitar, guitar, vocals"
+    }, {
+        "firstName": "Phil",
+        "lastName": "Rudd",
+        "instruments": "Drums, percussion, vocals"
+    }, {
+        "firstName": "Simon",
+        "lastName": "Wright",
+        "instruments": "Drums"
+    }]
+}
