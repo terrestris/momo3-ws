@@ -4,3 +4,6 @@
 [submodule "src/en/openlayers/ol3"]
 	path = src/en/openlayers/ol3
 	url = https://github.com/openlayers/workshop.git
+[submodule "src/en/geoext/geoext3-ws"]
+	path = src/en/geoext/geoext3-ws
+	url = https://github.com/geoext/geoext3-ws.git
