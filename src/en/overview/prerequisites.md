@@ -23,16 +23,4 @@ Navigate to this menu and look for some sort of an entry called
 priority list in which you can move the USB device boot option up to the top of
 this list. Now save your changes and exit the BIOS to restart your computer.
 
-## Login to Linux
-
-After the successful boot you should see the Linux Mint login screen as shown
-in the image below:
-
-![Linux Mint login screen.](assets/login_screen.png)
-
-Use the following credentials to login:
-
-* User: `momo-ws`
-* Password: `momo-ws`
-
 Congratulations! Now you are ready to start the workshop! :smiley:
