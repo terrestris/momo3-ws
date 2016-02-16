@@ -5,20 +5,20 @@ Here you will find some useful informations about the workshop image.
 ## Credentials
 
 * Linux:
-    * User: `momo-ws`
-    * Password: `momo-ws`
+    * User: `momo`
+    * Password: `momo`
 * GeoServer:
     * User: `admin`
-    * Password: `momo-ws`
+    * Password: `geoserver`
 * PostgreSQL:
     * User: `momo-ws`
     * Password: `momo-ws`
 
 ## Useful paths
 
-* Your home directory: `/home/momo3-ws`
-* Workshop directory: `/home/momo3-ws/materials`
-* Tomcat webapp directory: `/var/lib/tomcat8/webapps`
+* Your home directory: `/home/momo`
+* Workshop directory: `/home/momo/materials`
+* Tomcat webapp directory: `/opt/tomcat/webapps`
 
 ## Useful terminal commands
 
