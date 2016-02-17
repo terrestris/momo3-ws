@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="../../../../gitbook/style.css">
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
         
     
         
@@ -29,11 +37,15 @@
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
         
     
         
@@ -62,14 +74,14 @@
         
     </head>
     <body>
-        
+        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/jsrepl/jsrepl.js" id="jsrepl-script"></script>
         
     <div class="book"
         data-level="6.2.1"
         data-chapter-title="Hello exercise"
         data-filepath="geoext/geoext3-ws/src/first-steps/hello-exercise.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 10:05:03 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 10:09:13 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2889,13 +2901,6 @@
             
         </li>
     
-        <li class="chapter " data-level="6.6.4" data-path="geoext/geoext3-ws/src/other/summary.html">
-            
-            <span><b>6.6.4.</b> Summary</span>
-            
-            
-        </li>
-    
 
             </ul>
             
@@ -2981,8 +2986,8 @@
 <p>If everything worked, you should see something like in the following images.</p>
 <figure id="fig6.2.1.1"><img src="with-template.png" alt="Our first HTML-page"><figcaption>Our first HTML-page</figcaption></figure>
 <figure id="fig6.2.1.2"><img src="geoext-rocks.png" alt="Indeed, it does!"><figcaption>Indeed, it does!</figcaption></figure>
-<blockquote>
-<p><strong>info</strong> <strong>Please note:</strong></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> <strong>Please note:</strong></p>
 <p>In case add more files (e.g.for upcoming tasks) to the <code>src/exercise/</code>folder,
 and they are <em>not</em> instantly available under the URL /filename.html</p>
 <p>&#x2026; then you have to stop and start the fileserving again. See the <a href="../meta/development-environment.html">notes on starting / stopping</a> (Hint: <code>Ctrl-C</code> or <code>npm start</code>)</p>
@@ -3009,23 +3014,35 @@ and they are <em>not</em> instantly available under the URL /filename.html</p>
 <script src="../../../../gitbook/app.js"></script>
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/ace.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/ace.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/theme-tomorrow.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/mode-javascript.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.js"></script>
     
 
     
     <script src="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
     
 
     
@@ -3046,12 +3063,12 @@ and they are <em>not</em> instantly available under the URL /filename.html</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"exercises":{},"advanced-emoji":{"myConfigKey":"test"},"expandable-chapters":{},"include-codeblock":{}};
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"edit-link":{"base":"https://github.com/terrestris/momo3-ws/edit/master/src","label":"Edit…"},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"richquotes":{"task":{"alert":"info","picto":"fa-file-code-o"},"exercise":{"alert":"info","picto":"fa-file-code-o"}},"advanced-emoji":{"myConfigKey":"test"},"exercises-tmp-fixed-6":{},"expandable-chapters":{},"include-codeblock":{},"sectionx":{}};
     gitbook.start(config);
 });
 </script>
 
-        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        
     </body>
     
 </html>

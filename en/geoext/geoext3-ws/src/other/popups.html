@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="../../../../gitbook/style.css">
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
         
     
         
@@ -29,11 +37,15 @@
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
         
     
         
@@ -62,14 +74,14 @@
         
     </head>
     <body>
-        
+        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/jsrepl/jsrepl.js" id="jsrepl-script"></script>
         
     <div class="book"
         data-level="6.6.1"
         data-chapter-title="Popup"
         data-filepath="geoext/geoext3-ws/src/other/popups.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 10:05:03 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 10:09:13 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2889,13 +2901,6 @@
             
         </li>
     
-        <li class="chapter " data-level="6.6.4" data-path="geoext/geoext3-ws/src/other/summary.html">
-            
-            <span><b>6.6.4.</b> Summary</span>
-            
-            
-        </li>
-    
 
             </ul>
             
@@ -3128,7 +3133,7 @@ Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</spa
 
 </li>
 </ul>
-<!--sec data-title="Hint" data-id="hint1" data-show=false ces-->
+<sec data-title="Hint" data-id="hint1" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Hint<a class="pull-right section atTitle btn btn-default" target="hint1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="hint1"><div class="panel-body">
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> mapComponent = Ext.create(<span class="hljs-string">&apos;GeoExt.component.Map&apos;</span>, {
     map: map,
     region: <span class="hljs-string">&apos;center&apos;</span>,
@@ -3141,7 +3146,7 @@ mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span 
     <span class="hljs-built_in">console</span>.log(hdms);
 });
 </code></pre>
-<!--endsec-->
+</div></div></div></sec>
 <ul>
 <li>Once you have the above logging of the coordinate in place, we can now create a popup.</li>
 <li>Instantiate the class <code>GeoExt.component.Popup</code> and configure it with your map. You should also provide a <code>width</code>. Store the popup in an accessible variable; <code>var popup</code> is a good choice.</li>
@@ -3150,7 +3155,7 @@ mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span 
 
 </li>
 </ul>
-<!--sec data-title="Hint" data-id="hint2" data-show=false ces-->
+<sec data-title="Hint" data-id="hint2" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Hint<a class="pull-right section atTitle btn btn-default" target="hint2"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="hint2"><div class="panel-body">
 <pre><code class="lang-js">mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
     <span class="hljs-keyword">var</span> coordinate = evt.coordinate;
     <span class="hljs-keyword">var</span> lonlat = ol.proj.transform(coordinate, <span class="hljs-string">&apos;EPSG:3857&apos;</span>, <span class="hljs-string">&apos;EPSG:4326&apos;</span>)
@@ -3160,17 +3165,17 @@ mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span 
     popup.show();
 });
 </code></pre>
-<!--endsec-->
+</div></div></div></sec>
 <ul>
 <li>You may notice that the popup stays in place if the mouse leaves the map viewport, which is undesired in most of the cases. Use the event <code>pointerrestout</code> to <code>hide</code> the popup whenever the mouse leaves the map.</li>
 <li><button class="section" target="hint3" show="Show hint" hide="Hide hint"></button>
 
 </li>
 </ul>
-<!--sec data-title="Hint" data-id="hint3" data-show=false ces-->
+<sec data-title="Hint" data-id="hint3" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Hint<a class="pull-right section atTitle btn btn-default" target="hint3"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="hint3"><div class="panel-body">
 <pre><code class="lang-js">mapComponent.on(<span class="hljs-string">&apos;pointerrestout&apos;</span>, popup.hide, popup);
 </code></pre>
-<!--endsec-->
+</div></div></div></sec>
 <ul>
 <li>Congratulations, you can now happily hover anywhere on the map and be greeted with the hovered coordinate:</li>
 </ul>
@@ -3197,23 +3202,35 @@ mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span 
 <script src="../../../../gitbook/app.js"></script>
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/ace.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/ace.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/theme-tomorrow.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/mode-javascript.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.js"></script>
     
 
     
     <script src="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
     
 
     
@@ -3234,12 +3251,12 @@ mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span 
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"exercises":{},"advanced-emoji":{"myConfigKey":"test"},"expandable-chapters":{},"include-codeblock":{}};
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"edit-link":{"base":"https://github.com/terrestris/momo3-ws/edit/master/src","label":"Edit…"},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"richquotes":{"task":{"alert":"info","picto":"fa-file-code-o"},"exercise":{"alert":"info","picto":"fa-file-code-o"}},"advanced-emoji":{"myConfigKey":"test"},"exercises-tmp-fixed-6":{},"expandable-chapters":{},"include-codeblock":{},"sectionx":{}};
     gitbook.start(config);
 });
 </script>
 
-        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        
     </body>
     
 </html>

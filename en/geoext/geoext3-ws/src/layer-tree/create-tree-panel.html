@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="../../../../gitbook/style.css">
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
         
     
         
@@ -29,11 +37,15 @@
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
         
     
         
@@ -62,14 +74,14 @@
         
     </head>
     <body>
-        
+        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/jsrepl/jsrepl.js" id="jsrepl-script"></script>
         
     <div class="book"
         data-level="6.4.2"
         data-chapter-title="Create a TreePanel"
         data-filepath="geoext/geoext3-ws/src/layer-tree/create-tree-panel.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 10:05:03 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 10:09:13 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2889,13 +2901,6 @@
             
         </li>
     
-        <li class="chapter " data-level="6.6.4" data-path="geoext/geoext3-ws/src/other/summary.html">
-            
-            <span><b>6.6.4.</b> Summary</span>
-            
-            
-        </li>
-    
 
             </ul>
             
@@ -2985,24 +2990,24 @@ Ext.create(<span class="hljs-string">&apos;Ext.tree.Panel&apos;</span>, {
 
 </li>
 </ul>
-<!--sec data-title="Hints" data-id="hints" data-show=false ces-->
+<sec data-title="Hints" data-id="hints" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Hints<a class="pull-right section atTitle btn btn-default" target="hints"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="hints"><div class="panel-body">
 <ul>
 <li>Some hints (in case you have trouble getting it to work)<ul>
 <li>The store &#x2014; as complicated as it looks at first &#x2014; can be left as is, you don&apos;t need to change something here.</li>
 <li>The return value of the <code>Ext.create(&amp;#39;Ext.tree.Panel&amp;#39;, /**/)</code> call is currently ignored. You should try to save it in a variable (probably the one from our basic setup <code>layerTreePanel</code>).</li>
 <li>The height of the tree-panel is unnecessary, we want to put the panel in the west region, which has full height by default. Remove the <code>height</code>-property.</li>
-<li>The <code>renderTo</code>-configuration of the tree-panel is also fine for the ExtJS standalone example, but bad for our combination setup. In our case, the viewport takes care of where to actually render the tree. Remove the <code>renderTo</code>-property.  <!--endsec--></li>
-</ul>
-</li>
+<li>The <code>renderTo</code>-configuration of the tree-panel is also fine for the ExtJS standalone example, but bad for our combination setup. In our case, the viewport takes care of where to actually render the tree. Remove the <code>renderTo</code>-property.  </li></ul></li></ul></div></div></div></sec>
+
+
 <li>The final result should look like this:</li>
-</ul>
+
 <figure id="fig6.4.2.1"><img src="ext-example.png" alt="The copy and pasted Ext-example in our viewport"><figcaption>The copy and pasted Ext-example in our viewport</figcaption></figure>
 <ul>
 <li><button class="section" target="solution" show="Show solution" hide="Show solution"></button>
 
 </li>
 </ul>
-<!--sec data-title="Solution" data-id="solution" data-show=false ces-->
+<sec data-title="Solution" data-id="solution" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Solution<a class="pull-right section atTitle btn btn-default" target="solution"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="solution"><div class="panel-body">
 <ul>
 <li>For reference, here is the full code of the store, tree and viewport that lead to the above picture:</li>
 </ul>
@@ -3036,7 +3041,7 @@ Ext.create(<span class="hljs-string">&apos;Ext.tree.Panel&apos;</span>, {
     ]
 });
 </code></pre>
-<!--endsec-->
+</div></div></div></sec>
 
                     
                     </section>
@@ -3059,23 +3064,35 @@ Ext.create(<span class="hljs-string">&apos;Ext.tree.Panel&apos;</span>, {
 <script src="../../../../gitbook/app.js"></script>
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/ace.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/ace.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/theme-tomorrow.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/mode-javascript.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.js"></script>
     
 
     
     <script src="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
     
 
     
@@ -3096,12 +3113,12 @@ Ext.create(<span class="hljs-string">&apos;Ext.tree.Panel&apos;</span>, {
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"exercises":{},"advanced-emoji":{"myConfigKey":"test"},"expandable-chapters":{},"include-codeblock":{}};
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"edit-link":{"base":"https://github.com/terrestris/momo3-ws/edit/master/src","label":"Edit…"},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"richquotes":{"task":{"alert":"info","picto":"fa-file-code-o"},"exercise":{"alert":"info","picto":"fa-file-code-o"}},"advanced-emoji":{"myConfigKey":"test"},"exercises-tmp-fixed-6":{},"expandable-chapters":{},"include-codeblock":{},"sectionx":{}};
     gitbook.start(config);
 });
 </script>
 
-        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        
     </body>
     
 </html>

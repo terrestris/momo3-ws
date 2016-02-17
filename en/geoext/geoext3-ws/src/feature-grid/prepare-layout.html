@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="../../../../gitbook/style.css">
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
         
     
         
@@ -29,11 +37,15 @@
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojify.css">
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
         
     
         
-        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
         
     
         
@@ -62,14 +74,14 @@
         
     </head>
     <body>
-        
+        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/jsrepl/jsrepl.js" id="jsrepl-script"></script>
         
     <div class="book"
         data-level="6.5.1"
         data-chapter-title="Prepare layout"
         data-filepath="geoext/geoext3-ws/src/feature-grid/prepare-layout.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 10:05:03 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 10:09:13 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2889,13 +2901,6 @@
             
         </li>
     
-        <li class="chapter " data-level="6.6.4" data-path="geoext/geoext3-ws/src/other/summary.html">
-            
-            <span><b>6.6.4.</b> Summary</span>
-            
-            
-        </li>
-    
 
             </ul>
             
@@ -3069,7 +3074,7 @@ Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
 
 </li>
 </ul>
-<!--sec data-title="Hint" data-id="hint1" data-show=false ces-->
+<sec data-title="Hint" data-id="hint1" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Hint<a class="pull-right section atTitle btn btn-default" target="hint1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="hint1"><div class="panel-body">
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> featureStore = Ext.create(<span class="hljs-string">&apos;Ext.data.Store&apos;</span>, {
     fields:[ <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;phone&apos;</span>],
     data: [
@@ -3092,7 +3097,7 @@ Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
     region: <span class="hljs-string">&apos;south&apos;</span>
 });
 </code></pre>
-<!--endsec-->
+</div></div></div></sec>
 <ul>
 <li>Once we have added the <code>featurePanel</code> to the viewport, our application should look like in the following image:</li>
 </ul>
@@ -3104,7 +3109,7 @@ Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
 
 </li>
 </ul>
-<!--sec data-title="Hint" data-id="hint2" data-show=false ces-->
+<sec data-title="Hint" data-id="hint2" data-show="false"><div class="panel panel-default hidden"><div class="panel-heading"><h2>Hint<a class="pull-right section atTitle btn btn-default" target="hint2"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse" id="hint2"><div class="panel-body">
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> redStyle = <span class="hljs-keyword">new</span> ol.style.Style({
     image: circle = <span class="hljs-keyword">new</span> ol.style.Circle({
         fill: <span class="hljs-keyword">new</span> ol.style.Fill({
@@ -3126,7 +3131,7 @@ Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
     style: redStyle
 });
 </code></pre>
-<!--endsec-->
+</div></div></div></sec>
 <ul>
 <li>Our application should now look like in the following image:</li>
 </ul>
@@ -3153,23 +3158,35 @@ Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
 <script src="../../../../gitbook/app.js"></script>
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/ace.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/ace.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/theme-tomorrow.js"></script>
     
 
     
-    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/exercises.js"></script>
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/ace/mode-javascript.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/exercises.js"></script>
     
 
     
     <script src="../../../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
     
 
     
@@ -3190,12 +3207,12 @@ Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"exercises":{},"advanced-emoji":{"myConfigKey":"test"},"expandable-chapters":{},"include-codeblock":{}};
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"edit-link":{"base":"https://github.com/terrestris/momo3-ws/edit/master/src","label":"Edit…"},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"},"richquotes":{"task":{"alert":"info","picto":"fa-file-code-o"},"exercise":{"alert":"info","picto":"fa-file-code-o"}},"advanced-emoji":{"myConfigKey":"test"},"exercises-tmp-fixed-6":{},"expandable-chapters":{},"include-codeblock":{},"sectionx":{}};
     gitbook.start(config);
 });
 </script>
 
-        <script src="../../../../gitbook/plugins/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        
     </body>
     
 </html>
