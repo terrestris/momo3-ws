@@ -69,7 +69,7 @@
         data-chapter-title="Popup"
         data-filepath="geoext/geoext3-ws/src/other/popups.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 08:33:25 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 08:37:07 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2891,15 +2891,7 @@
     
         <li class="chapter " data-level="6.6.4" data-path="geoext/geoext3-ws/src/other/summary.html">
             
-                
-                    <a href="../../../../geoext/geoext3-ws/src/other/summary.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.6.4.</b>
-                        
-                        Summary
-                    </a>
+            <span><b>6.6.4.</b> Summary</span>
             
             
         </li>
@@ -2957,6 +2949,232 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="popups">Popups</h1>
+<p>In this chapter we want to add short informative popups on the map. We will open the popup when the mouse lasts for a certain amount of time at a specific location. Inside the popup we show the formatted coordinates of the hover-location. To do this we will make use of a GeoExt event on the <code>GeoExt.component.Map</code> and of the class <code>GeoExt.component.Popup</code>.</p>
+<h2 id="exercises">Exercises</h2>
+<ul>
+<li>Prepare the <code>map.html</code> file to contain the following code. This is basically the result of the previous chapters:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Exercise | GeoExt Workshop<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-triton/resources/theme-triton-all.css&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;./lib/ol/ol.css&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./lib/ol/ol.js&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;https://geoext.github.io/geoext3/master/GeoExt.js&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+<span class="hljs-keyword">var</span> map;
+Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+
+    <span class="hljs-keyword">var</span> redStyle = <span class="hljs-keyword">new</span> ol.style.Style({
+        image: circle = <span class="hljs-keyword">new</span> ol.style.Circle({
+            fill: <span class="hljs-keyword">new</span> ol.style.Fill({
+                color: <span class="hljs-string">&apos;rgba(220, 0, 0, 0.5)&apos;</span>
+            }),
+            stroke: <span class="hljs-keyword">new</span> ol.style.Stroke({
+                color: <span class="hljs-string">&apos;rgba(220, 0, 0, 0.8)&apos;</span>,
+                width: <span class="hljs-number">3</span>
+            }),
+            radius: <span class="hljs-number">8</span>
+        })
+    });
+    <span class="hljs-keyword">var</span> blueStyle = <span class="hljs-keyword">new</span> ol.style.Style({
+        image: circle = <span class="hljs-keyword">new</span> ol.style.Circle({
+            fill: <span class="hljs-keyword">new</span> ol.style.Fill({
+                color: <span class="hljs-string">&apos;rgba(0, 0, 220, 0.5)&apos;</span>
+            }),
+            stroke: <span class="hljs-keyword">new</span> ol.style.Stroke({
+                color: <span class="hljs-string">&apos;rgba(0, 0, 220, 0.8)&apos;</span>,
+                width: <span class="hljs-number">3</span>
+            }),
+            radius: <span class="hljs-number">8</span>
+        })
+    })
+
+
+    <span class="hljs-keyword">var</span> vectorLayer = <span class="hljs-keyword">new</span> ol.layer.Vector({
+        source: <span class="hljs-keyword">new</span> ol.source.Vector({
+            url: <span class="hljs-string">&apos;data/aimag-centers.json&apos;</span>,
+            format: <span class="hljs-keyword">new</span> ol.format.GeoJSON()
+        }),
+        name: <span class="hljs-string">&apos;Aimag&apos;</span>,
+        style: redStyle
+    });
+
+    <span class="hljs-comment">// 1) OpenLayers</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// Create an instance of an OpenLayers map:</span>
+    map = <span class="hljs-keyword">new</span> ol.Map({
+        layers: [
+            <span class="hljs-keyword">new</span> ol.layer.Tile({
+                source: <span class="hljs-keyword">new</span> ol.source.OSM(),
+                name: <span class="hljs-string">&apos;OpenStreetMap&apos;</span>
+            }),
+            <span class="hljs-keyword">new</span> ol.layer.Tile({
+                source: <span class="hljs-keyword">new</span> ol.source.TileWMS({
+                    url: <span class="hljs-string">&apos;http://ows.terrestris.de/osm/service&apos;</span>,
+                    params: {
+                        layers: <span class="hljs-string">&apos;OSM-WMS&apos;</span>
+                    }
+                }),
+                name: <span class="hljs-string">&apos;OSM WMS (terrestris)&apos;</span>
+            }),
+            vectorLayer
+        ],
+        view: <span class="hljs-keyword">new</span> ol.View({
+            center: ol.proj.fromLonLat( [<span class="hljs-number">106.92</span>, <span class="hljs-number">47.92</span>] ),
+            zoom: <span class="hljs-number">4</span>
+        })
+    });
+
+    <span class="hljs-comment">// 2) GeoExt</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// Create an instance of the GeoExt map component with that map:</span>
+    <span class="hljs-keyword">var</span> mapComponent = Ext.create(<span class="hljs-string">&apos;GeoExt.component.Map&apos;</span>, {
+        map: map,
+        region: <span class="hljs-string">&apos;center&apos;</span>
+    });
+
+    <span class="hljs-keyword">var</span> treeStore = Ext.create(<span class="hljs-string">&apos;GeoExt.data.store.LayersTree&apos;</span>, {
+        layerGroup: map.getLayerGroup()
+    });
+
+    <span class="hljs-keyword">var</span> layerTreePanel = Ext.create(<span class="hljs-string">&apos;Ext.tree.Panel&apos;</span>, {
+        title: <span class="hljs-string">&apos;Layers of the application&apos;</span>,
+        width: <span class="hljs-number">300</span>,
+        region: <span class="hljs-string">&apos;west&apos;</span>,
+        store: treeStore,
+        rootVisible: <span class="hljs-literal">false</span>,
+        viewConfig: {
+            plugins: { ptype: <span class="hljs-string">&apos;treeviewdragdrop&apos;</span> }
+        }
+    });
+
+    <span class="hljs-keyword">var</span> featureStore = Ext.create(<span class="hljs-string">&apos;GeoExt.data.store.Features&apos;</span>, {
+        layer: vectorLayer,
+        map: map
+    });
+    <span class="hljs-keyword">var</span> featureGrid = Ext.create(<span class="hljs-string">&apos;Ext.grid.Panel&apos;</span>, {
+        store: featureStore,
+        region: <span class="hljs-string">&apos;south&apos;</span>,
+        title: <span class="hljs-string">&apos;Centers of Mongolian Aimag&apos;</span>,
+        columns: [
+            {xtype: <span class="hljs-string">&apos;gx_symbolizercolumn&apos;</span>, width: <span class="hljs-number">30</span>},
+            {text: <span class="hljs-string">&apos;Name&apos;</span>, dataIndex: <span class="hljs-string">&apos;NAME&apos;</span>, flex: <span class="hljs-number">3</span>},
+            {text: <span class="hljs-string">&apos;Population&apos;</span>, dataIndex: <span class="hljs-string">&apos;POP&apos;</span>, flex: <span class="hljs-number">1</span>},
+            {text: <span class="hljs-string">&apos;AIMAG_ID&apos;</span>, dataIndex: <span class="hljs-string">&apos;AIMAG_ID&apos;</span>, flex: <span class="hljs-number">1</span>}
+        ],
+        listeners: {
+            selectionchange: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sm, selected)</span> </span>{
+                <span class="hljs-comment">// reset all selections</span>
+                featureStore.<span class="hljs-keyword">each</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(rec)</span> </span>{
+                    rec.getFeature().setStyle(<span class="hljs-literal">null</span>);
+                });
+                <span class="hljs-comment">// highlight grid selection in map</span>
+                Ext.<span class="hljs-keyword">each</span>(selected, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(rec)</span> </span>{
+                    rec.getFeature().setStyle(blueStyle);
+                });
+                <span class="hljs-comment">// update the grid rendering of the geometry</span>
+                sm.view.refresh();
+            }
+        },
+        height: <span class="hljs-number">300</span>
+    });
+
+    <span class="hljs-comment">// 3) Ext JS</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// Create a viewport</span>
+    <span class="hljs-keyword">var</span> vp = Ext.create(<span class="hljs-string">&apos;Ext.container.Viewport&apos;</span>, {
+        layout: <span class="hljs-string">&apos;border&apos;</span>,
+        items: [
+            mapComponent,
+            layerTreePanel,
+            featureGrid
+        ]
+    });
+});
+        </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<ul>
+<li>If you open this file in a browser (/map.html), the application should look like in the following image:</li>
+</ul>
+<figure id="fig6.6.1.1"><img src="../feature-grid/after.png" alt="Our starting point"><figcaption>Our starting point</figcaption></figure>
+<ul>
+<li>For popups to look right, we need some CSS. Include the following in the <code>&amp;lt;head&amp;gt;</code> of the page:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;http://geoext.github.io/geoext3/master/resources/css/gx-popup.css&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<span class="hljs-class">.gx-popup</span> <span class="hljs-tag">p</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">7px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0.85</span>)</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">3px</span> solid white</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+}</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Configure the existing <code>GeoExt.component.Map</code> with <code>pointerRest: true</code>. Only if this configuration is <code>true</code>, the map-component will emit the <code>pointerrest</code> &amp; <code>pointerrestout</code> events.</li>
+<li>Read the documentation for <a href="http://geoext.github.io/geoext3/master/docs/#!/api/GeoExt.component.Map-event-pointerrest" target="_blank"><code>pointerrest</code></a> &amp; <a href="http://geoext.github.io/geoext3/master/docs/#!/api/GeoExt.component.Map-event-pointerrestout" target="_blank"><code>pointerrestout</code></a></li>
+<li>Register an event-listener on <code>pointerrest</code> that logs the hovered coordinate. Use the OpenLayers utility methods <code>ol.coordinate.toStringHDMS</code> and <code>ol.proj.transform</code> on the <code>evt.coordinate</code> to format the coordinate.</li>
+<li><button class="section" target="hint1" show="Show hint" hide="Hide hint"></button>
+
+</li>
+</ul>
+<!--sec data-title="Hint" data-id="hint1" data-show=false ces-->
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> mapComponent = Ext.create(<span class="hljs-string">&apos;GeoExt.component.Map&apos;</span>, {
+    map: map,
+    region: <span class="hljs-string">&apos;center&apos;</span>,
+    pointerRest: <span class="hljs-literal">true</span>
+});
+mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-keyword">var</span> coordinate = evt.coordinate;
+    <span class="hljs-keyword">var</span> lonlat = ol.proj.transform(coordinate, <span class="hljs-string">&apos;EPSG:3857&apos;</span>, <span class="hljs-string">&apos;EPSG:4326&apos;</span>)
+    <span class="hljs-keyword">var</span> hdms = ol.coordinate.toStringHDMS(lonlat);
+    <span class="hljs-built_in">console</span>.log(hdms);
+});
+</code></pre>
+<!--endsec-->
+<ul>
+<li>Once you have the above logging of the coordinate in place, we can now create a popup.</li>
+<li>Instantiate the class <code>GeoExt.component.Popup</code> and configure it with your map. You should also provide a <code>width</code>. Store the popup in an accessible variable; <code>var popup</code> is a good choice.</li>
+<li>Inside of the configured callback on <code>pointerrest</code> we now want to update the HTML of the popup (method <code>setHtml</code>) and reposition it at the coordinate (method <code>position</code>, pass the coordinates in the view projection). Finally, <code>show</code> the popup.</li>
+<li><button class="section" target="hint2" show="Show hint" hide="Hide hint"></button>
+
+</li>
+</ul>
+<!--sec data-title="Hint" data-id="hint2" data-show=false ces-->
+<pre><code class="lang-js">mapComponent.on(<span class="hljs-string">&apos;pointerrest&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-keyword">var</span> coordinate = evt.coordinate;
+    <span class="hljs-keyword">var</span> lonlat = ol.proj.transform(coordinate, <span class="hljs-string">&apos;EPSG:3857&apos;</span>, <span class="hljs-string">&apos;EPSG:4326&apos;</span>)
+    <span class="hljs-keyword">var</span> hdms = ol.coordinate.toStringHDMS(lonlat);
+    popup.setHtml(<span class="hljs-string">&apos;&lt;p&gt;&apos;</span> + hdms + <span class="hljs-string">&apos;&lt;/p&gt;&apos;</span>);
+    popup.position(coordinate);
+    popup.show();
+});
+</code></pre>
+<!--endsec-->
+<ul>
+<li>You may notice that the popup stays in place if the mouse leaves the map viewport, which is undesired in most of the cases. Use the event <code>pointerrestout</code> to <code>hide</code> the popup whenever the mouse leaves the map.</li>
+<li><button class="section" target="hint3" show="Show hint" hide="Hide hint"></button>
+
+</li>
+</ul>
+<!--sec data-title="Hint" data-id="hint3" data-show=false ces-->
+<pre><code class="lang-js">mapComponent.on(<span class="hljs-string">&apos;pointerrestout&apos;</span>, popup.hide, popup);
+</code></pre>
+<!--endsec-->
+<ul>
+<li>Congratulations, you can now happily hover anywhere on the map and be greeted with the hovered coordinate:</li>
+</ul>
+<figure id="fig6.6.1.2"><img src="popup.png" alt="A popup for a hovered location"><figcaption>A popup for a hovered location</figcaption></figure>
 
                     
                     </section>
