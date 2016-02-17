@@ -25,7 +25,6 @@ configuration only and is no integral part of the workshop.
             * [http://localhost:80/geoserver](http://localhost:80/geoserver)
     * [Atom Editor](https://atom.io/)
         * Installed from [here](http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html)
-        * :bangbang: MJ list additional plugins
     * [Chrome](https://www.google.de/chrome/browser/desktop/)
         * Installed from [here](https://www.google.com/chrome/browser/desktop/index.html)
     * [PostgreSQL](http://www.postgresql.org/) / [PostGIS](http://postgis.net/)
