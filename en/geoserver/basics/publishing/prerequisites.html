@@ -81,7 +81,7 @@
         data-chapter-title="Prerequisites"
         data-filepath="geoserver/basics/publishing/prerequisites.md"
         data-basepath="../../.."
-        data-revision="Wed Feb 17 2016 10:09:13 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 11:13:49 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2972,8 +2972,8 @@ server:</p>
 <li><em>Name:</em> momo-workshop</li>
 <li><em>Host:</em> localhost</li>
 <li><em>Port:</em> 5432</li>
-<li><em>Username:</em> momo-ws</li>
-<li><em>Password:</em> momo-ws</li>
+<li><em>Username:</em> momo</li>
+<li><em>Password:</em> momo</li>
 <li><em>Store password:</em> checked
   <img src="../../assets/pgadmin_new_server_connection.png" alt="A new server connection"></li>
 </ul>
@@ -2991,7 +2991,7 @@ and select <code>Connect</code> as shown below).</p>
  <img src="../../assets/pgadmin_open_query_window.png" alt=""> in the upper toolbar. Note:
  If the icon is greyed out, select the existing database <code>postgres</code> first.</li>
 <li>Copy the following SQL block into the SQL-Query window:<pre><code class="lang-sql"> <span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> db_momo_ws
-  <span class="hljs-keyword">WITH</span> OWNER = momo-ws
+  <span class="hljs-keyword">WITH</span> OWNER = momo
   <span class="hljs-keyword">ENCODING</span> = <span class="hljs-string">&apos;UTF8&apos;</span>
   <span class="hljs-keyword">TABLESPACE</span> = pg_default
   <span class="hljs-keyword">CONNECTION</span> <span class="hljs-keyword">LIMIT</span> = -<span class="hljs-number">1</span>;</span>
@@ -3017,7 +3017,7 @@ workshop.</p>
  subsequent SQL queries will be executed on the wrong database!</li>
 <li>Copy the following SQL block into the SQL-Query window to create a new schema
  named <code>geodata</code>:<pre><code class="lang-sql"> <span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">SCHEMA</span> geodata
-  AUTHORIZATION momo-ws;</span>
+  AUTHORIZATION momo;</span>
 </code></pre>
 </li>
 <li>Click <code>Execute query</code> (<img src="../../assets/pgadmin_run_query.png" alt="">) to run the query.</li>
