@@ -81,7 +81,7 @@
         data-chapter-title="Prerequisites"
         data-filepath="geoserver/advanced/gwc/prerequisites.md"
         data-basepath="../../.."
-        data-revision="Wed Feb 17 2016 13:58:15 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 14:00:51 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2959,33 +2959,33 @@ where GWC should save all cached tiles. To accomplish this, please follow these
 steps:</p>
 <ol>
 <li>Open the terminal and create the cache directory (Note: You&apos;ll be prompted
- for the admin password):<pre><code class="lang-bash"> $ sudo mkdir /var/lib/tomcat7/webapps/geoserver/data/gwc
+ for the admin password):<pre><code class="lang-bash"> $ sudo mkdir /opt/tomcat/webapps/geoserver/data/gwc
 </code></pre>
 </li>
 <li>Ensure GeoServer has read and write access to this directory by changig the
- ownership to user and group <code>tomcat7</code>:<pre><code class="lang-bash"> $ sudo chown tomcat7:tomcat7 /var/lib/tomcat7/webapps/geoserver/data/gwc
+ ownership to user and group <code>tomcat</code>:<pre><code class="lang-bash"> $ sudo chown tomcat:tomcat /opt/tomcat/webapps/geoserver/data/gwc
 </code></pre>
 </li>
 <li>Open the terminal and copy the following command to open the file <code>web.xml</code>
-in the text editor <code>gedit</code>:<pre><code class="lang-bash">$ sudo gedit /var/lib/tomcat7/webapps/geoserver/WEB-INF/web.xml
+in the text editor <code>gedit</code>:<pre><code class="lang-bash">$ sudo gedit /opt/tomcat/webapps/geoserver/WEB-INF/web.xml
 </code></pre>
 </li>
 <li>The following block will advise GWC to store all cached tiles into the directory
-<code>/var/lib/tomcat7/webapps/geoserver/data/gwc</code>. Insert it at line ~64 in the
+<code>/opt/tomcat/webapps/geoserver/data/gwc</code>. Insert it at line ~64 in the
 already opened file.<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- The GWC data directory--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">context-param</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-title">param-name</span>&gt;</span>GEOWEBCACHE_CACHE_DIR<span class="hljs-tag">&lt;/<span class="hljs-title">param-name</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">param-value</span>&gt;</span>/var/lib/tomcat7/webapps/geoserver/data/gwc<span class="hljs-tag">&lt;/<span class="hljs-title">param-value</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">param-value</span>&gt;</span>/opt/tomcat/webapps/geoserver/data/gwc<span class="hljs-tag">&lt;/<span class="hljs-title">param-value</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">context-param</span>&gt;</span>
 </code></pre>
 </li>
 <li>Save the changes and close the text editor.</li>
 <li>To apply the changes, we need to restart GeoServer. Go to your terminal and
-run the following command:<pre><code class="lang-bash">$ sudo service tomcat7 restart
+run the following command:<pre><code class="lang-bash">$ sudo restart tomcat
 </code></pre>
 </li>
 <li>Open the newly created directory in the terminal to check there is a file
-named <code>geowebache.xml</code> only:<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> /var/lib/tomcat7/webapps/geoserver/data/gwc
+named <code>geowebache.xml</code> only:<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> /opt/tomcat/webapps/geoserver/data/gwc
 </code></pre>
 </li>
 </ol>
