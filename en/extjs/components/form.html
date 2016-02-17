@@ -69,7 +69,7 @@
         data-chapter-title="Form"
         data-filepath="extjs/components/form.md"
         data-basepath="../.."
-        data-revision="Wed Feb 17 2016 08:37:07 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 10:05:03 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2949,20 +2949,26 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="form-fields">Form Fields</h1>
+<p>The <code>Ext.form.Panel</code> presents a subclass of the panel and is especially useful
+for building user interaction web forms and for saving and loading remote data.
+Usually you combine a form panel with subclasses inherited from the
+<code>Ext.field.Field</code> class. In the following example we&apos;ll get to know some of the
+most important fields one would use in a form (listed with xtypes and links to
+the API documentation):</p>
 <ul>
-<li>Textfield</li>
-<li>Displayfield</li>
-<li>Numberfield</li>
-<li>Combobox</li>
-<li>Checkbox</li>
-<li>DatePicker</li>
-<li>Slider</li>
-<li>FileField</li>
-<li>Button</li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.form.field.Text" target="_blank">textfield</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.form.field.Display" target="_blank">displayfield</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.form.field.Number" target="_blank">numberfield</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.form.field.ComboBox" target="_blank">combobox</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.form.field.Checkbox" target="_blank">checkbox</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.picker.Date" target="_blank">datepicker</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.slider.Single" target="_blank">slider</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.form.field.File" target="_blank">filefield</a></li>
+<li><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.button.Button" target="_blank">button</a></li>
 </ul>
 <h2 id="exercise">Exercise</h2>
 <ul>
-<li>(Re-)open your <code>index.html</code> and extend the <code>Ext.container.Viewport</code> items
+<li>(Re-)open your <code>index.html</code> and extend the panel in the viewport&apos;s east region
   by the following snippet:<blockquote>
 <p><a name="component-form-fields.js" href="../snippets/component-form-fields.js">component-form-fields.js</a></p>
 </blockquote>
@@ -2973,25 +2979,30 @@
     title: <span class="hljs-string">&apos;FormPanel&apos;</span>,
     region: <span class="hljs-string">&apos;east&apos;</span>,
     width: <span class="hljs-string">&apos;20%&apos;</span>,
+    autoScroll: <span class="hljs-literal">true</span>,
     defaults: {
         anchor: <span class="hljs-string">&apos;100%&apos;</span>
     },
     items: [{
         xtype: <span class="hljs-string">&apos;textfield&apos;</span>,
+        name: <span class="hljs-string">&apos;text&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Text&apos;</span>,
         emptyText: <span class="hljs-string">&apos;Enter a text&apos;</span>
     }, {
         xtype: <span class="hljs-string">&apos;displayfield&apos;</span>,
+        name: <span class="hljs-string">&apos;status&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Status&apos;</span>,
         value: <span class="hljs-string">&apos;&lt;span style=&quot;color:green;&quot;&gt;OK&lt;/span&gt;&apos;</span>
     }, {
         xtype: <span class="hljs-string">&apos;numberfield&apos;</span>,
+        name: <span class="hljs-string">&apos;number&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Number&apos;</span>,
         emptyText: <span class="hljs-string">&apos;Enter a number&apos;</span>,
         minValue: <span class="hljs-number">0</span>,
         maxValue: <span class="hljs-number">99</span>
     }, {
         xtype: <span class="hljs-string">&apos;combo&apos;</span>,
+        name: <span class="hljs-string">&apos;combo&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Combo&apos;</span>,
         emptyText: <span class="hljs-string">&apos;Select from list&apos;</span>,
         minValue: <span class="hljs-number">0</span>,
@@ -3003,18 +3014,22 @@
         ]
     }, {
         xtype: <span class="hljs-string">&apos;checkbox&apos;</span>,
+        name: <span class="hljs-string">&apos;check&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Check&apos;</span>
     }, {
         xtype: <span class="hljs-string">&apos;datefield&apos;</span>,
+        name: <span class="hljs-string">&apos;dateField&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Date Field&apos;</span>
     }, {
         xtype: <span class="hljs-string">&apos;slider&apos;</span>,
+        name: <span class="hljs-string">&apos;slider&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Slider&apos;</span>,
         minValue: <span class="hljs-number">0</span>,
         maxValue: <span class="hljs-number">100</span>,
         value: <span class="hljs-number">25</span>
     }, {
         xtype: <span class="hljs-string">&apos;filefield&apos;</span>,
+        name: <span class="hljs-string">&apos;upload&apos;</span>,
         fieldLabel: <span class="hljs-string">&apos;Upload&apos;</span>
     }]
 }
@@ -3023,6 +3038,42 @@
 <li>Reload the page in the browser and take a look at the result:</li>
 </ul>
 <figure id="fig5.4.3.1"><img src="../assets/component-form-fields.png" alt="Nested component image in a panel."><figcaption>Nested component image in a panel.</figcaption></figure>
+<p>As stated above, the form is very useful if you want to systematically read out
+values given by the user and to work with them afterwards, e.g. sending the
+values to a server endpoint. In the next example we&apos;re going to create another
+useful form component, the <code>Ext.form.FieldSet</code> class. The fieldset is a
+specialized container for grouping fields. We we&apos;ll now create a fieldset with
+a textarea and a button (ignore the <code>handler</code> method for the moment, we&apos;ll explain
+events and component querying later on).</p>
+<ul>
+<li>Add the following fieldset to the lower end of the form field we declared above:<pre><code class="lang-javascript">  {
+    xtype: <span class="hljs-string">&apos;fieldset&apos;</span>,
+    title: <span class="hljs-string">&apos;Input data&apos;</span>,
+    layout: <span class="hljs-string">&apos;fit&apos;</span>,
+    items: [{
+        xtype: <span class="hljs-string">&apos;textarea&apos;</span>,
+        height: <span class="hljs-number">180</span>,
+        isFormField: <span class="hljs-literal">false</span>
+    }, {
+        xtype: <span class="hljs-string">&apos;button&apos;</span>,
+        text: <span class="hljs-string">&apos;Read input data&apos;</span>,
+        handler: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">btn</span>) </span>{
+            <span class="hljs-keyword">var</span> form = btn.up(<span class="hljs-string">&apos;form&apos;</span>),
+                textArea = form.down(<span class="hljs-string">&apos;textarea&apos;</span>);
+            textArea.setValue(
+                <span class="hljs-built_in">JSON</span>.stringify(
+                    form.getValues(), <span class="hljs-literal">null</span>, <span class="hljs-number">4</span>
+                )
+            );
+        }
+    }]
+  }
+</code></pre>
+</li>
+<li>Reload the page in the browser, enter some custom values in the form field and
+  press the button <code>Read input data</code>:</li>
+</ul>
+<figure id="fig5.4.3.2"><img src="../assets/component-form-read-data.png" alt="Nested component image in a panel."><figcaption>Nested component image in a panel.</figcaption></figure>
 
                     
                     </section>

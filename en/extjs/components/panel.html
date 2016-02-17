@@ -69,7 +69,7 @@
         data-chapter-title="Panel"
         data-filepath="extjs/components/panel.md"
         data-basepath="../.."
-        data-revision="Wed Feb 17 2016 08:37:07 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 10:05:03 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2950,15 +2950,15 @@
                     
                         <h1 id="panel">Panel</h1>
 <p>A <code>Panel</code> is a container designed for building structured blocks for application
-oriented user interfaces.</p>
-<p>Panels are, by their inheritance from <code>Ext.container.Container</code>, capable of being
-configured with a layout, and containing child components.</p>
-<p>When either specifying child items of a Panel, or dynamically adding Components
-to a Panel, remember to consider how you wish the Panel to arrange those child
-elements, and whether those child elements need to be sized using one of Ext&apos;s
-built-in layout schemes. By default, Panels use the Auto scheme. This simply
-renders child components, appending them one after the other inside the Container,
-and does not apply any sizing at all.</p>
+oriented user interfaces. Panels are, by their inheritance from
+<code>Ext.container.Container</code>, capable of being configured with a layout (see
+<a href="../layouts/index.html">previous chapter</a>) and containing child components.
+Panels also provide built-in collapsible, expandable and closable behavior and
+can be easily dropped into any container or layout, whereas the layout and
+rendering is completely managed by the framework.</p>
+<p>In most applications the panel is one of the most often used components. In the
+next exercise we&apos;ll extent our existing viewport by only a few configurations
+and will see, that we have worked with panels (even we haven&apos;t specified it) yet.</p>
 <h2 id="exercise">Exercise</h2>
 <ul>
 <li>(Re-)open your <code>index.html</code> and extend the <code>Ext.container.Viewport</code> to match
@@ -3006,17 +3006,18 @@ and does not apply any sizing at all.</p>
 });
 </code></pre>
 <figure id="fig5.4.1.1"><img src="../assets/component-panel.png" alt="Advanced Border layout."><figcaption>Advanced Border layout.</figcaption></figure>
-<p>It&apos;s hardly a difference to our previous examples, differences</p>
-<p>xtype: &apos;panel&apos;
-split: false,
-margin: 5</p>
-<h1 id="panel-toolbar">Panel toolbar</h1>
-<p>A Panel may also contain bottom and top toolbars, along with separate header, footer and body sections.</p>
-<p>Panel also provides built-in collapsible, expandable and closable behavior. Panels can be easily dropped into any Container or layout, and the layout and rendering pipeline is completely managed by the framework.</p>
+<p>As you may notice, it&apos;s hardly to spot any viewable difference to our previous
+example. But have a look at the <code>defaults</code> attribute set in the viewport. It
+contains a new key named <code>xtype</code> (remember: it&apos;s the shorthand name for a
+component) with the value <code>panel</code>. Thus every direct child in the viewport will
+be instantiated as a <code>panel</code>.</p>
+<h1 id="advanced-panel-configuration">Advanced panel configuration</h1>
+<p>A Panel may also contain bottom and top toolbars, along with separate header,
+footer and body sections.</p>
 <h2 id="exercise">Exercise</h2>
 <ul>
-<li>(Re-)open your <code>index.html</code> and extend the <code>Ext.container.Viewport</code> items
-  by the following snippet:<blockquote>
+<li>(Re-)open your <code>index.html</code> and extend the panel rendered in the viewports
+  center by the following snippet:<blockquote>
 <p><a name="component-panel-toolbar.js" href="../snippets/component-panel-toolbar.js">component-panel-toolbar.js</a></p>
 </blockquote>
 </li>
