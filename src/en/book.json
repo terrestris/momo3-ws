@@ -28,15 +28,32 @@
     }
   },
   "plugins": [
-    "exercises",
-    "image-captions",
     "advanced-emoji",
+    "edit-link",
+    "exercises-tmp-fixed-6",
     "expandable-chapters",
-    "include-codeblock"
+    "image-captions",
+    "include-codeblock",
+    "richquotes",
+    "sectionx"
   ],
   "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/terrestris/momo3-ws/edit/master/src",
+      "label": "Edit…"
+    },
     "image-captions": {
       "caption": "_CAPTION_"
+    },
+    "richquotes": {
+      "task": {
+        "alert": "info",
+        "picto": "fa-file-code-o"
+      },
+      "exercise": {
+        "alert": "info",
+        "picto": "fa-file-code-o"
+      }
     }
   }
 }
