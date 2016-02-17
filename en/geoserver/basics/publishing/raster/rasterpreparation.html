@@ -81,7 +81,7 @@
         data-chapter-title="Preparation"
         data-filepath="geoserver/basics/publishing/raster/rasterpreparation.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 13:49:12 GMT+0000 (UTC)"
+        data-revision="Wed Feb 17 2016 13:58:15 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -3003,17 +3003,17 @@ the GDAL command line utilities and available for various operating systems.</p>
 <li>As GeoServer needs to have read and write access to the pyramid we just
   created, we&apos;ll move the <code>OB_LR_pyramid</code> folder to the GeoServer <code>data</code> directory:</li>
 </ul>
-<pre><code class="lang-undefined">$ sudo mv OB_LR_pyramid/ /var/lib/tomcat7/webapps/geoserver/data/data/
+<pre><code class="lang-undefined">$ sudo mv OB_LR_pyramid/ /opt/tomcat/webapps/geoserver/data/data/
 </code></pre>
 <ol>
 <li>Navigate to the data directory:</li>
 </ol>
-<pre><code class="lang-undefined">$ cd /var/lib/tomcat7/webapps/geoserver/data/data/
+<pre><code class="lang-undefined">$ cd /opt/tomcat/webapps/geoserver/data/data/
 </code></pre>
 <ol>
-<li>Assign read and write access to the <code>tomcat7</code> user:</li>
+<li>Assign read and write access to the <code>tomcat</code> user:</li>
 </ol>
-<pre><code class="lang-undefined">$ sudo chown -R tomcat7:tomcat7 OB_LR_pyramid; sudo chmod -R 755 OB_LR_pyramid/
+<pre><code class="lang-undefined">$ sudo chown -R tomcat:tomcat OB_LR_pyramid; sudo chmod -R 755 OB_LR_pyramid/
 </code></pre>
 
                     
