@@ -59,7 +59,7 @@ most helpful terminal commands used in this workshop.
 
 * Start/Stop/Restart PostgreSQL: `$ sudo service postgresql start|stop|restart`
 * Start/Stop/Restart Apache: `$ sudo service apache2 start|stop|restart`
-* Start/Stop/Restart Tomcat: `$ sudo service tomcat8 start|stop|restart`
+* Start/Stop/Restart Tomcat: `$ sudo start|stop|restart tomcat`
 
 ### Other useful commands
 
