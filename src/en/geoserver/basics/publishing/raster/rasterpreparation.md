@@ -55,17 +55,17 @@ Short explanation:
    created, we'll move the `OB_LR_pyramid` folder to the GeoServer `data` directory:
 
 ```
-$ sudo mv OB_LR_pyramid/ /var/lib/tomcat7/webapps/geoserver/data/data/
+$ sudo mv OB_LR_pyramid/ /opt/tomcat/webapps/geoserver/data/data/
 ```
 
 5. Navigate to the data directory:
 
 ```
-$ cd /var/lib/tomcat7/webapps/geoserver/data/data/
+$ cd /opt/tomcat/webapps/geoserver/data/data/
 ```
 
-6. Assign read and write access to the `tomcat7` user:
+6. Assign read and write access to the `tomcat` user:
 
 ```
-$ sudo chown -R tomcat7:tomcat7 OB_LR_pyramid; sudo chmod -R 755 OB_LR_pyramid/
+$ sudo chown -R tomcat:tomcat OB_LR_pyramid; sudo chmod -R 755 OB_LR_pyramid/
 ```
