@@ -13,8 +13,6 @@ components at the time they're getting meaningful for your application, e.g.
 creating an error message at the time an error occurred. In the upcoming examples
 we'll use the `xtype` to create components.
 
-Ext JS components are following a hierarchy of inheritance
-
 A typical application's component hierarchy starts with a viewport at the top,
 which has other containers and/or components nested within it.
 

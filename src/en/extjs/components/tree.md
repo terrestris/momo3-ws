@@ -1,5 +1,10 @@
 # Trees
 
+The `Ext.tree.Panel` class provides a tree-structured UI representation of
+tree-structured data. A treepanel must be bound to a `Ext.data.TreeStore` (the
+Ext JS data package including stores will be handled in the
+[next chapter](../data/README.md)).
+
 ## Exercise
 
 * (Re-)open your `index.html` and extend the `Ext.container.Viewport` items
