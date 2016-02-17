@@ -33,8 +33,8 @@ database.
     * *port:* 5432
     * *database:* db_momo_ws
     * *schema:* geodata
-    * *user:* momo_ws
-    * *passwd:* momo_ws
+    * *user:* momo
+    * *passwd:* momo
 6. Click `Save`
 
 ![Add new store](../../../assets/configure_vector_store.png)
