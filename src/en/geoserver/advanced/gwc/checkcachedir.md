@@ -8,7 +8,7 @@ the layer `countries`.
 1. Open the terminal and navigate to the GWC cache directory for the `countries`
    layer:
 ```
-$ cd /var/lib/tomcat7/webapps/geoserver/data/gwc/momo_countries
+$ cd /opt/tomcat/webapps/geoserver/data/gwc/momo_countries
 ```
 2. List the directory contents with:
 ```
