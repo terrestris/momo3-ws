@@ -19,8 +19,8 @@ server:
     * *Name:* momo-workshop
     * *Host:* localhost
     * *Port:* 5432
-    * *Username:* momo-ws
-    * *Password:* momo-ws
+    * *Username:* momo
+    * *Password:* momo
     * *Store password:* checked
 ![A new server connection](../../assets/pgadmin_new_server_connection.png)
 2. Click `OK`
@@ -41,7 +41,7 @@ If the icon is greyed out, select the existing database `postgres` first.
 2. Copy the following SQL block into the SQL-Query window:
 ```sql
 CREATE DATABASE db_momo_ws
-    WITH OWNER = momo-ws
+    WITH OWNER = momo
     ENCODING = 'UTF8'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
@@ -69,7 +69,7 @@ workshop.
    named `geodata`:
 ```sql
 CREATE SCHEMA geodata
-    AUTHORIZATION momo-ws;
+    AUTHORIZATION momo;
 ```
 3. Click `Execute query` (![](../../assets/pgadmin_run_query.png)) to run the query.
 4. Refresh the `Object browser` and ensure the new schema is being created in

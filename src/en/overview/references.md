@@ -11,8 +11,8 @@ Here you will find some useful informations about the workshop image.
     * User: `admin`
     * Password: `geoserver`
 * PostgreSQL:
-    * User: `momo-ws`
-    * Password: `momo-ws`
+    * User: `momo`
+    * Password: `momo`
 
 ## Useful paths
 

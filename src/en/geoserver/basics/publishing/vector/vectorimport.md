@@ -39,7 +39,7 @@ $ shp2pgsql \
   psql \
     -h localhost \
     -p 5432 \
-    -U momo-ws \
+    -U momo \
     -W \
     -d db_momo_ws
 ```
