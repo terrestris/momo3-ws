@@ -170,5 +170,4 @@
         * [Popup](geoext/geoext3-ws/src/other/popups.md)
         * [Overview map](geoext/geoext3-ws/src/other/overview-map.md)
         * [Other](geoext/geoext3-ws/src/other/other.md)
-        * [Summary](geoext/geoext3-ws/src/other/summary.md)
 * [Synopsis](wrap-up/README.md)
