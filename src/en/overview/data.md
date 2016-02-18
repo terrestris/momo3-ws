@@ -13,5 +13,5 @@ use the datasets `Cultural`, `Physical` and `Raster` in large scale (1:10m).
 
 [OpenStreetMap](http://www.openstreetmap.org/) is a free editable map database
 of the world. In this workshop we use a small excerpt of the huge OSM
-database focused on mongolia which is provided by the company geofabrik as a
+database focused on mongolia which is provided by the company [geofabrik](http://www.geofabrik.de/) as a
 collection of single [shapefiles](http://download.geofabrik.de/asia/mongolia-160101.shp.zip).
