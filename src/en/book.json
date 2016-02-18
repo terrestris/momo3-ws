@@ -24,7 +24,7 @@
   },
   "links": {
     "sidebar": {
-      "Select language…": "/momo3-ws/"
+      "Select language…": "javascript:(function(l,h){l[h]=/localhost/.test(l[h])?'/':'/momo3-ws/'}(location,'href'))"
     }
   },
   "plugins": [
