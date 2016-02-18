@@ -13,5 +13,5 @@ address if you need any information about GeoServer.
 
 ## Exercise
 
-1. Follow the mentioned `Documentation` link and have a quick look around to
-   see the valuable resources available here!
+* Follow the mentioned `Documentation` link and have a quick look around to
+  see the valuable resources available here!

@@ -19,16 +19,16 @@ renders the child items as normal block elements in the DOM.
 
 Generally the layout of a `Container` has the be set via the `layout` configuration
 attribute. In most cases it's satisfactory to set the name of the requested layout
-as a simple string (e.g. `'auto'`) only, but there are layouts available where
-a full object, specifying the layout options in more detail, are allowed.
-Furthermore several layouts hold particular attributes related to the child
+as a simple string (e.g. <code>&#39;auto&#39;</code>) only, but there are layouts
+available where a full object, specifying the layout options in more detail, are
+allowed. Furthermore several layouts hold particular attributes related to the child
 components of the container specifying e.g. it's inner position or size.
 
 In this section we're going to have a quick look to some of the predefined
 layouts Ext JS provides to us. Here we focus on the following layouts:
 
-> *Note:* The descriptions given in the upcoming subsections are more or less
-          derived from the [API documentation](http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.layout.Layout).
+> **Note** The descriptions given in the upcoming subsections are based on the
+           [API documentation](http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.layout.Layout).
 
 * [Column](./column.md)
 * [HBox](./hbox.md)

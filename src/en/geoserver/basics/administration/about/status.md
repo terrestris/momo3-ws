@@ -7,8 +7,10 @@ configuration and overall status.
 
 It provides a useful diagnostic tool in a testing and production environment and
 should be your first place to go if are facing any problem with your running
-GeoServer instance. *Note:* Certainly it's always useful to have a look at
-the [Logs](./logs.md) additionally.
+GeoServer instance.
+
+> **Note** Certainly it's always useful to have a look at the [Logs](./logs.md)
+           additionally.
 
 ## Status indicators
 
@@ -39,5 +41,5 @@ The following table describes the current status indicators (as described
 
 ## Exercise
 
-1. Open up the `Server Status` page on your GeoServer and press the button
-   `Free memory` besides `Memory Usage`. What do you observe?
+* Open up the `Server Status` page on your GeoServer and press the button
+  `Free memory` besides `Memory Usage`. What do you observe?

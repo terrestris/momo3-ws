@@ -21,11 +21,11 @@ Now we can add a new store to our new workspace `momo`. This store tells
 GeoServer how to connect to the data source, in our case the PostgreSQL
 database.
 
-1. Navigate to `Data` &#10093; `Stores`.
-2. Click `Add new Store`.
-3. Click `PostGIS - PostGIS Database`
-4. Set the Workspace to `momo` if it isn't set already.
-5. Configure the new store as follows:
+* Navigate to `Data` &#10093; `Stores`.
+* Click `Add new Store`.
+* Click `PostGIS - PostGIS Database`
+* Set the Workspace to `momo` if it isn't set already.
+* Configure the new store as follows:
     * *Data Source Name:* db_momo_ws
     * *Enabled:* checked
     * *dbtype:* postgis
@@ -35,6 +35,6 @@ database.
     * *schema:* geodata
     * *user:* momo
     * *passwd:* momo
-6. Click `Save`
+* Click `Save`
 
 ![Add new store](../../../assets/configure_vector_store.png)

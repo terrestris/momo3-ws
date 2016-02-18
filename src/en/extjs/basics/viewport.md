@@ -16,8 +16,8 @@ and positioning on its child components as you can add other Ext JS UI component
 and containers to it. How the positioning inside the `Viewport` takes place is
 thereby configurable by a so called `Layout` (see [next chapter](../layouts/README.md)).
 
-> *Note:* Given that the `Viewport` sizes to browser window, it's reasonable to
-          have a **single** viewport per Ext JS application only.
+> **Note** Given that the `Viewport` sizes to browser window, it's reasonable to
+           have a **single** viewport per Ext JS application only.
 
 In this section we're going create a simple viewport containing a set of nested
 child components. This viewport will then act as the basic template for any

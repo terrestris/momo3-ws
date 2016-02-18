@@ -34,16 +34,18 @@ A gridsubset is a layer-specific definition specifying:
 * (Optional) A list of zoom levels (which must be a subset of what is defined
   in the gridSet).
 
-*Note:* For further instructions have a look at the source of the above explanations,
-[here](http://geowebcache.org/docs/1.6.0/concepts/index.html).
+> **Note** For further instructions have a look at the source of the above
+           explanations, [here](http://geowebcache.org/docs/1.6.0/concepts/index.html).
 
 ## Configure a new gridset
 
 So, our first step will be to create a new gridset:
 
-1. Go to `Tile Caching` &#10093; `Gridsets`
-![Gridsets](../../assets/gwc_gridsets.png)
-2. Click `Create a new gridset` to create a new gridset and use the following
+* Go to `Tile Caching` &#10093; `Gridsets`
+
+![](../../assets/gwc_gridsets.png)
+
+* Click `Create a new gridset` to create a new gridset and use the following
    options for the creation:
    * *Name:* momo-4326
    * *Coordinate Reference System:* Use the find-button to select `EPSG:4326`
@@ -51,11 +53,13 @@ So, our first step will be to create a new gridset:
    * *Tile width in pixels:* 512
    * *Tile height in pixels:* 512
    * *Define grids based on:* Select `Scale denominators`
-3. Click `Add zoom level` to create a new zoom level. Enter the scale `300.000.000`
-   and the name `0`.
-4. Once again click `Add zoom level`. You will see that the scale value is
-   automatically cut into halves (`150.000.000`). Just enter the name `1` and
-   repeat this step until you reached a total count of 8 zoom levels. The last
-   scale value should be `2.343.750`.
-![New gridset](../../assets/gwc_new_gridset.png)
-5. Click `Save`.
+* Click `Add zoom level` to create a new zoom level. Enter the scale `300.000.000`
+  and the name `0`.
+* Once again click `Add zoom level`. You will see that the scale value is
+  automatically cut into halves (`150.000.000`). Just enter the name `1` and
+  repeat this step until you reached a total count of 8 zoom levels. The last
+  scale value should be `2.343.750`.
+
+![](../../assets/gwc_new_gridset.png)
+
+* Click `Save`.

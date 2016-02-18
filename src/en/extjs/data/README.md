@@ -17,6 +17,6 @@ of our border layout that'll contain an `Ext.data.Store` reading remote data
 with the use of an `Ext.data.proxy.Ajax` proxy. The store will be associated
 with an `Ext.data.Model`.
 
-* [Gridpanel](./grid.md)
+* [Preparation](./grid.md)
 * [Model](./model.md)
 * [Proxy and store](./store.md)

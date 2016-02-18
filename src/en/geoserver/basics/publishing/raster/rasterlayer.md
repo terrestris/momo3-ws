@@ -13,7 +13,7 @@ newly created layer. For the moment, we want to set up the layer with some basic
 configuration only. Thus we ignore custom styling or caching that will be
 handled later on.
 
-1. Configure the new layer as follows:
+* Configure the new layer as follows:
     * *Name:* ocean-bottom-relief
     * *Enabled:* checked
     * *Advertised:* checked
@@ -22,11 +22,11 @@ handled later on.
     * *Native SRS:* EPSG:4326
     * *Declared SRS:* EPSG:4326
     * *SRS handling:* Keep native
-2. Let GeoServer calculate the bounds of the data by clicking
-   `Compute from data`.
-3. Convert the native bounds to the Lat/Lon Bounding Box by clicking
-   `Compute from native bounds`.
+* Let GeoServer calculate the bounds of the data by clicking
+  `Compute from data`.
+* Convert the native bounds to the Lat/Lon Bounding Box by clicking
+  `Compute from native bounds`.
 
-![Publish a new layer.](../../../assets/configure_raster_layer.png)
+![](../../../assets/configure_raster_layer.png)
 
-4. Click `Save`.
+* Click `Save`.

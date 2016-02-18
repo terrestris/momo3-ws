@@ -14,10 +14,12 @@ Generally speaking, GWC applies two methods for creating cached map tiles:
 With the following steps we'll preprocess the tiles and start the so called
 `Seeding` job.
 
-1. Go to `Tile Caching` &#10093; `Tile Layers`.
-2. Find the layer `momo:countries` and select `Seed/Truncate`.
-![Cached layer](../../assets/gwc_seed_layer.png)
-3. In the upcoming mask we can configure a GWC-task for seeding the layers
+* Go to `Tile Caching` &#10093; `Tile Layers`.
+* Find the layer `momo:countries` and select `Seed/Truncate`.
+
+![](../../assets/gwc_seed_layer.png)
+
+* In the upcoming mask we can configure a GWC-task for seeding the layers
    `countries`. Here we can use the following configuration:
    * *Number of tasks to use:* 04
    * *Type of operation:* Reseed - regenerate all tiles (The option
@@ -27,11 +29,15 @@ With the following steps we'll preprocess the tiles and start the so called
    * *Format:* image/png
    * *Zoom start:* 00
    * *Zoom stop:* 07
-![GWC settings](../../assets/gwc_start_seed_task.png)
-4. Click `Submit`.
-5. In the same window the section `List of currently executing tasks` will be
-   filled with the recent tasks and involves some basic informations about it.
-![GWC seed status](../../assets/gwc_task_status_list.png)
-6. Depending on your system resources the seeding tasks should not cover more
-   than a few minutes. Click `Refresh list` to see if the tasks are finished
-   or not.
+
+![](../../assets/gwc_start_seed_task.png)
+
+* Click `Submit`.
+* In the same window the section `List of currently executing tasks` will be
+  filled with the recent tasks and involves some basic informations about it.
+
+![](../../assets/gwc_task_status_list.png)
+
+* Depending on your system resources the seeding tasks should not cover more
+  than a few minutes. Click `Refresh list` to see if the tasks are finished
+  or not.

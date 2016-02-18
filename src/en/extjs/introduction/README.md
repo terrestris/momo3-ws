@@ -5,8 +5,6 @@
 Ext JS is a JavaScript based application framework for developing interactive
 cross-platform applications and is a product of [Sencha](https://www.sencha.com/).
 
-See here http://www.extjs-tutorial.com/extjs/extjs-class-system
-
 ## Useful resources
 
 ### API documentation

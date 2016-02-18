@@ -21,29 +21,35 @@ The master password serves two purposes:
   meant to provide an alternative access method for fixing configuration issues.
   The user name for the root account is `root`. Its name cannot be changed.).
 
+### Exercise
+
 To change the master password follow these steps:
 
-1. Go to `Security` &#10093; `Passwords`.
-2. Select `Change password`.
-3. In the upcoming form use the following values to change the password to
-   `momo-ws`:
+* Go to `Security` &#10093; `Passwords`.
+* Select `Change password`.
+* In the upcoming form use the following values to change the password to
+  `momo-ws`:
     * *Current password:* geoserver
     * *New password*/*Confirmation:* momo-ws (Please use a more secure password
       in a real world GeoServer usage!)
-4. Click `Change Password`.
+* Click `Change Password`.
 
 ## Change admin user password
 
+### Exercise
+
 To change the password for the user `admin` please follow these steps:
 
-1. Go to `Security` &#10093; `Users, Groups, Roles`.
-2. Open panel `Users/Groups` where you'll see a list of all current users of your
+* Go to `Security` &#10093; `Users, Groups, Roles`.
+* Open panel `Users/Groups` where you'll see a list of all current users of your
    GeoServer instance. At the moment (and in most future applications) you'll
    find the user `admin` only.
-3. Select the user `admin` by clicking on its username.
-3. In the upcoming form use the following values to change the password to
-   `momo-ws`:
+* Select the user `admin` by clicking on its username.
+* In the upcoming form use the following values to change the password to
+  `momo-ws`:
     * *Password*/*Confirm Password:* momo-ws (Please use a more secure password
       in a real world GeoServer usage!)
-   ![Change user password.](../../../assets/security_change_user_pw.png)
-4. Click `Save`.
+
+![](../../../assets/security_change_user_pw.png)
+
+* Click `Save`.
