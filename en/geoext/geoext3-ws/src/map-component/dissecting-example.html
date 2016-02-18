@@ -81,7 +81,7 @@
         data-chapter-title="Dissecting the example"
         data-filepath="geoext/geoext3-ws/src/map-component/dissecting-example.md"
         data-basepath="../../../.."
-        data-revision="Thu Feb 18 2016 11:27:02 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 13:23:38 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2960,20 +2960,20 @@
 </code></pre>
 <p>&#x2026;we declare that the HTML file shall be handled as an <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank">HTML5 document</a>. We recommend the usage of this doctype to force browsers into fixed rules of rendering the page. This eventually also reduces inconsistencies of the behaviour of the page in various browsers.</p>
 <h3 id="declaration-of-the-character-set">Declaration of the character set</h3>
-<p>In order to tell the browser that we have encoded our file as UTF-8, we add a <code>&amp;lt;meta&amp;gt;</code>-tag to the <code>&amp;lt;head&amp;gt;</code> of the document:</p>
+<p>In order to tell the browser that we have encoded our file as UTF-8, we add a <code>&lt;meta&gt;</code>-tag to the <code>&amp;lt;head&amp;gt;</code> of the document:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
 </code></pre>
 <p>This way we can be relatively sure that all the characters we enter into the document (e.g. German umlauts like <code>&#xE4;</code>, <code>&#xF6;</code> or <code>&#xFC;</code>; or <code>&#x423;&#x43B;&#x430;&#x430;&#x43D;&#x431;&#x430;&#x430;&#x442;&#x430;&#x440;</code>) are correctly displayed when viewing the site.</p>
 <h3 id="css-and-javascript-resources">CSS and JavaScript resources</h3>
-<p>Also in the <code>&amp;lt;head&amp;gt;</code> of the document we load external JavaScript and CSS files, so we can use our needed libraries later.</p>
+<p>Also in the <code>&lt;head&gt;</code> of the document we load external JavaScript and CSS files, so we can use our needed libraries later.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;URL-or-relative-path-to-file&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;URL-or-relative-path-to-file&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
 </code></pre>
-<p>For this workshop it will be enough to always include the full builds of the library; and to always load them in the <code>&amp;lt;head&amp;gt;</code>. This technique allows us to basically forget about these resources for the course of the workshop. For a production website you would probably load the files in a different manor, and you would rather not load the versions of the libraries which contain everything. The creation of specific versions of the base libraries that only include what your application actually needs, is way beyond the scope of this workshop.</p>
+<p>For this workshop it will be enough to always include the full builds of the library; and to always load them in the <code>&lt;head&gt;</code>. This technique allows us to basically forget about these resources for the course of the workshop. For a production website you would probably load the files in a different manor, and you would rather not load the versions of the libraries which contain everything. The creation of specific versions of the base libraries that only include what your application actually needs, is way beyond the scope of this workshop.</p>
 <h3 id="scripttag-in-the-body"><code>&lt;script&gt;</code>-tag in the <code>&lt;body&gt;</code></h3>
 <p>Our body of the HTML file is really, really, <em>really</em> minimalistic:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
@@ -2983,7 +2983,7 @@
 </code></pre>
 <p>We only include one <code>&amp;lt;script&amp;gt;</code>-tag that will contain all the JavaScript that we need to create our map. The contents of this tag will be interpreted as JavaScript, and the code will be run as soon as the browser sees it.</p>
 <h2 id="javascript-code-for-the-map">JavaScript code for the map</h2>
-<p>All our code to create the full screen map lives in the <code>&amp;lt;script&amp;gt;</code>-tag in the HTML <code>&amp;lt;body&amp;gt;</code>.</p>
+<p>All our code to create the full screen map lives in the <code>&lt;script&gt;</code>-tag in the HTML <code>&lt;body&gt;</code>.</p>
 <p>Let&apos;s go through all the lines in there.</p>
 <h3 id="a-variable-named-map">A variable named <code>map</code></h3>
 <p>The first line in the example reads:</p>
@@ -2997,7 +2997,7 @@
 });
 </code></pre>
 <p>These lines pass an anonymous (e.g. unnamed) function to the method <code>Ext.onReady</code>. This method will execute the passed function as soon as the Document is ready, e.g. External resources have loaded and the DOM (Document Object Model) of the page is ready to be manipulated.</p>
-<p>Behind the curtains, when we create instances of some Ext classes, they will eventually need to modify the DOM. In order to run into problems when such changes happen to early (remember, all code in the <code>&amp;lt;script&amp;gt;</code> tag is executed as soon as it is being read), we wrap the real code to actually create ExtJS components into a function. We then simply tell ExtJS to delay the real work to a later time, when everything is ready.</p>
+<p>Behind the curtains, when we create instances of some Ext classes, they will eventually need to modify the DOM. In order to run into problems when such changes happen to early (remember, all code in the <code>&lt;script&gt;</code> tag is executed as soon as it is being read), we wrap the real code to actually create ExtJS components into a function. We then simply tell ExtJS to delay the real work to a later time, when everything is ready.</p>
 <p>Let&apos;s have a look at the parts inside this function.</p>
 <h3 id="creating-an-olmap">Creating an <code>ol.Map</code></h3>
 <p>First we want to create an instance of an <code>ol.Map</code>:</p>

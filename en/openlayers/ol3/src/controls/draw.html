@@ -81,7 +81,7 @@
         data-chapter-title="Draw interaction"
         data-filepath="openlayers/ol3/src/controls/draw.md"
         data-basepath="../../../.."
-        data-revision="Thu Feb 18 2016 11:27:02 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 13:23:38 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -3008,6 +3008,14 @@
 <ol>
 <li>Create a listener which gets the new feature&apos;s X and Y after it is drawn.</li>
 </ol>
+<h3 id="solutions">Solutions</h3>
+<p>Here is a solution for the first bonus task. In it we register an event listener for the <code>drawend</code> event of the <code>ol.interaction.Draw</code>. This method logs the feature&apos;s X and Y to the developer console:</p>
+<pre><code class="lang-js">draw.on(<span class="hljs-string">&apos;drawend&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>)</span>{
+  <span class="hljs-keyword">var</span> feature = evt.feature;
+  <span class="hljs-keyword">var</span> p = feature.getGeometry();
+  <span class="hljs-built_in">console</span>.log(p.getCoordinates());
+});
+</code></pre>
 
                     
                     </section>

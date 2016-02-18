@@ -81,7 +81,7 @@
         data-chapter-title="Proprietary tile providers"
         data-filepath="openlayers/ol3/src/layers/proprietary.md"
         data-basepath="../../../.."
-        data-revision="Thu Feb 18 2016 11:27:02 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 13:23:38 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2943,7 +2943,7 @@
 <li><p>In your <code>map.html</code> file, find where the OSM (OpenStreetMap) source is configured and change it into an <code>ol.source.BingMaps</code></p>
 <pre><code class="lang-js"> source: <span class="hljs-keyword">new</span> ol.source.BingMaps({
     imagerySet: <span class="hljs-string">&apos;Road&apos;</span>,
-    key: <span class="hljs-string">&apos;Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3&apos;</span>
+    key: <span class="hljs-string">&apos;&lt;Your Bing Maps Key Here&gt;&apos;</span>
   })
 </code></pre>
 <p> <em>Note</em> - The Bing tiles API requires that you register for an API key to use with your mapping application.  The example here uses an API key that you should not use in production.  To use the Bing layer in production, register for an API key at <a href="https://www.bingmapsportal.com/" target="_blank">https://www.bingmapsportal.com/</a>.</p>
@@ -2979,7 +2979,7 @@
           <span class="hljs-keyword">new</span> ol.layer.Tile({
             source: <span class="hljs-keyword">new</span> ol.source.BingMaps({
               imagerySet: <span class="hljs-string">&apos;Road&apos;</span>,
-              key: <span class="hljs-string">&apos;Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3&apos;</span>
+              key: <span class="hljs-string">&apos;&lt;Your Bing Maps Key Here&gt;&apos;</span>
             })
           })
         ],

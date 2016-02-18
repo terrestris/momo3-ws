@@ -81,7 +81,7 @@
         data-chapter-title="Overview map"
         data-filepath="geoext/geoext3-ws/src/other/overview-map.md"
         data-basepath="../../../.."
-        data-revision="Thu Feb 18 2016 11:27:02 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 13:23:38 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -3135,7 +3135,7 @@ Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</spa
 });
 </code></pre>
 <ul>
-<li>Instead of assigning the <code>region: &amp;#39;west&amp;#39;</code> to the layer tree panel, we&apos;ll create a new <code>container</code> with the <code>vbox</code>-layout and pass that to the <code>items</code> of the <code>Ext.container.Viewport</code>:</li>
+<li>Instead of assigning the <code>region: &apos;west&apos;</code> to the layer tree panel, we&apos;ll create a new <code>container</code> with the <code>vbox</code>-layout and pass that to the <code>items</code> of the <code>Ext.container.Viewport</code>:</li>
 </ul>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> vp = Ext.create(<span class="hljs-string">&apos;Ext.container.Viewport&apos;</span>, {
     layout: <span class="hljs-string">&apos;border&apos;</span>,
@@ -3162,7 +3162,7 @@ Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</spa
 <figure id="fig6.6.2.2"><img src="overview-prepared.png" alt="The prepared layout"><figcaption>The prepared layout</figcaption></figure>
 <ul>
 <li>Now it is time to use <code>GeoExt.component.OverviewMap</code>: Create an instance of this class and read the <a href="http://geoext.github.io/geoext3/master/docs/#!/api/GeoExt.component.OverviewMap" target="_blank">related API-docs</a>.</li>
-<li>Configure the <code>overviewPanel</code> with the created overview instead of <code>html: &amp;#39;TODO&amp;#39;</code> (via <code>items</code>).</li>
+<li>Configure the <code>overviewPanel</code> with the created overview instead of <code>html: &apos;TODO&apos;</code> (via <code>items</code>).</li>
 <li>You may want to have another layer in the overview. How about this WMS?</li>
 </ul>
 <pre><code class="lang-undefined">URL: http://ows.terrestris.de/osm-gray/service
