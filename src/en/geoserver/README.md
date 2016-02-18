@@ -1,5 +1,7 @@
 # GeoServer
 
+![](assets/geoserver-logo.png)
+
 GeoServer is an Open Source software server written in Java that allows users
 to share and edit geospatial data. Designed for interoperability, it publishes
 data from any major spatial data source using open standards.
@@ -18,7 +20,7 @@ The workshop is subdivided into two main categories:
 * [GeoServer Basics (Administration & Publishing)](basics/README.md)
 * [GeoServer Advanced (REST & GeoWebCache)](advanced/README.md)
 
-*Please note:* Parts of this workshop are heavily inspired by workshops prepared
+> **note** Parts of this workshop are heavily inspired by workshops prepared
 by the [GeoServer community](http://docs.geoserver.org/latest/en/user/index.html)
 and [boundless](https://github.com/boundlessgeo/workshops/blob/master/workshops/geoserver/intro/slides/slides.rst).
 Feel free to look at these sources for further informations.
