@@ -14,14 +14,14 @@ serving, but good for redistribution and as a starting point to build a pyramid.
 In order to build the pyramid we'll use the `gdal_retile.py` utility, part of
 the GDAL command line utilities and available for various operating systems.
 
-1. Open terminal and navigate to directory `~/materials/natural_earth/OB_LR`.
-2. Create a new folder named `pyramid` with:
+* Open terminal and navigate to directory `~/materials/natural_earth/OB_LR`.
+* Create a new folder named `pyramid` with:
 
 ```
 $  mkdir OB_LR_pyramid/
 ```
 
-3. Run the following command that will build a pyramid (Note: This may take a while!):
+* Run the following command that will build a pyramid (Note: This may take a while!):
 
 ```
 $ gdal_retile.py -v \
@@ -51,20 +51,20 @@ Short explanation:
   target directory must exist and be empty
 * **OB_LR.tif**: The source file
 
-4. As GeoServer needs to have read and write access to the pyramid we just
+* As GeoServer needs to have read and write access to the pyramid we just
    created, we'll move the `OB_LR_pyramid` folder to the GeoServer `data` directory:
 
 ```
 $ sudo mv OB_LR_pyramid/ /opt/tomcat/webapps/geoserver/data/data/
 ```
 
-5. Navigate to the data directory:
+* Navigate to the data directory:
 
 ```
 $ cd /opt/tomcat/webapps/geoserver/data/data/
 ```
 
-6. Assign read and write access to the `tomcat` user:
+* Assign read and write access to the `tomcat` user:
 
 ```
 $ sudo chown -R tomcat:tomcat OB_LR_pyramid; sudo chmod -R 755 OB_LR_pyramid/

@@ -26,7 +26,7 @@ $ atom .
 ![Start view atom editor.](../assets/atom-start.png)
 
 Having `atom` opened we can create a new file by opening the context-menu on the
-project folder `{{ book.extWorkshopFolderName }}` and selecting `New File`.
+project folder <code>{{ book.extWorkshopFolderName }}</code> and selecting `New File`.
 
 * Create a new file named `index.html` in the exercise directory and copy the
   content of the following basic HTML template into it
@@ -48,19 +48,19 @@ consists of two files: Both a `CSS` (*Cascading Style Sheets*) and a `JS`
 
 ### Exercise
 
-* Include the external files inside the end of your <code><head></code> element
-  of your `index.html`:
+* Include the external files inside the end of your <code>&lt;head&gt;</code>
+  element of your `index.html`:
 [import](../snippets/include-ext-cdnjs.html)
 * Again, reload the URL in the browser and keep track of the changes:
 
 ![The basic HTML page after including Ext JS.](../assets/include-ext-js.png)
 
-> **Note:** For this workshop it's satisfying to include the full builds of the
-            framework and to always load them in the `head`. This technique
-            allows us to basically forget about these resources for the course
-            of the workshop. For a production website you would probably load
-            the files in a different manor, and you would rather not load the
-            versions of the libraries which contain everything. But the creation
-            of specific versions of the base libraries that only include what
-            your application actually needs, is way beyond the scope of this
-            workshop.
+> **Note** For this workshop it's satisfying to include the full builds of the
+           framework and to always load them in the `head`. This technique
+           allows us to basically forget about these resources for the course
+           of the workshop. For a production website you would probably load
+           the files in a different manor, and you would rather not load the
+           versions of the libraries which contain everything. But the creation
+           of specific versions of the base libraries that only include what
+           your application actually needs, is way beyond the scope of this
+           workshop.

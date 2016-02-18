@@ -21,8 +21,8 @@ which has other containers and/or components nested within it.
 In the upcoming section we're going to inspect some components that might be
 useful for any Ext JS application your're going to develop in the future:
 
-> *Note:* The descriptions given in the upcoming subsections are more or less
-          derived from the [API documentation](http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.Component).
+> **Note** The descriptions given in the upcoming subsections are based on the
+           [API documentation](http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.Component).
 
 * [Panel](./panel.md)
 * [Image](./image.md)

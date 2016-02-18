@@ -19,7 +19,7 @@ In the next few steps we're going to fetch back our missing data by reusing the
 already existing button in the toolbar as a `Load data` button:
 
 * Find the button declaration within the panel in the center region and rename
-  it accordingly (<code>text: 'Load data'</code>).
+  it accordingly (<code>text: &#39;Load data&#39;</code>).
 * Register a new listener to the `click`-event and pass an anonymous function
   to it. This function will be called if the `click` event is fired by the
   button class:

@@ -8,5 +8,5 @@ the logs, click on `GeoServer Logs` on the left under <code>About & Status</code
 
 ## Exercise
 
-1. Open up the `GeoServer Logs` section and investigate the last entries in
-   your logfile. Can you find any conspicuous or interesting entry?
+* Open up the `GeoServer Logs` section and investigate the last entries in
+  your logfile. Can you find any conspicuous or interesting entry?

@@ -75,8 +75,8 @@ a detailed filter configuration (from `Ext.util.Filter` class).
 ```
 The given object represents a filter that is applied to the `filter()` function
 and is defined to filter the `property` (that is the field in the model to filter
-on) `'firstName'`. The `value` to filter with is the `newValue` given by the
-event or an empty string (`''`) if the passed value is falsy (`false`, `0`, `''`
+on) <code>&#39;firstName&#39;</code>. The `value` to filter with is the `newValue` given by the
+event or an empty string (<code>&#39;&#39;</code>) if the passed value is falsy (`false`, `0`, <code>&#39;&#39;</code>
 `null`, `undefined` or `NaN`). Setting `anyMatch` to `true` configures the filter
 to match the value characters at any position in the store's value and by having
 `caseSensitive` set to `false` we ignore exact case matching.

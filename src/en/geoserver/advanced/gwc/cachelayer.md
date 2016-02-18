@@ -3,8 +3,8 @@
 In the next step we'll configure the layer `countries` to apply to all needed
 cache-properties.
 
-1. Go to `Data` &#10093; `Layers` and select the `countries` layer.
-2. Open the panel `Tile Caching`.
+* Go to `Data` &#10093; `Layers` and select the `countries` layer.
+* Open the panel `Tile Caching`.
 
 Here we can configure all GWC-dependend properties in a per-layer-basis. The
 most important configuration parameters are:
@@ -33,7 +33,7 @@ most important configuration parameters are:
 
 With this in mind, we can configure the layer `countries` as follows:
 
-1. Select the following values:
+* Select the following values:
   * *Create a cached layer for this layer:* checked
   * *Enable tile caching for this layer:* checked
   * *Metatiling factors:* 4 x 4
@@ -45,5 +45,7 @@ With this in mind, we can configure the layer `countries` as follows:
   * *Gridset:* Select `momo-4326` in the `Add grid subset` combobox and click the
     green plus icon. Remove any other preconfigured gridset by clicking the red
     minus icon.
-![Cached layer](../../assets/gwc_create_cached_layer.png)
-2. Click `Save`.
+
+![](../../assets/gwc_create_cached_layer.png)
+
+* Click `Save`.

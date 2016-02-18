@@ -5,16 +5,16 @@ we created above. Given that everything worked fine in the previous step, the
 cache directory should contain a lot of tiles building up the tile pyramid for
 the layer `countries`.
 
-1. Open the terminal and navigate to the GWC cache directory for the `countries`
-   layer:
+* Open the terminal and navigate to the GWC cache directory for the `countries`
+  layer:
 ```
 $ cd /opt/tomcat/webapps/geoserver/data/gwc/momo_countries
 ```
-2. List the directory contents with:
+* List the directory contents with:
 ```
 $ ls -l
 ```
-3. Explore that the cache directory is built up by following pattern:
+* Explore that the cache directory is built up by following pattern:
 ```
 momo_countries/ (layername)
   |

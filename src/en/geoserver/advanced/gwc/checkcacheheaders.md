@@ -15,18 +15,22 @@ the response headers of single tile are extended by the following HTTP-headers:
 To check if these headers are set, we need to open the GeoServer user interface
 again:
 
-1. Go to `Tile Caching` &#10093; `Tile Layers`.
-2. Find the layer `momo:countries` and select `momo-4326 / png` under `Preview`.
-![Cached layer](../../assets/gwc_open_preview.png)
-3. In the preview window/tab press `F12` to open the browsers **Developer Toolbar**,
-   activate the `Network` tab, select the `Img` subsection and reload the page
-   to record the network activity.
-![Cached layer](../../assets/gwc_dev_toolbar.png)
-4. Clear the list content with the `Clear` button (![](../../assets/gwc_clear_list_btn.png))
-5. Zoom in to a location of your choice, find a WMS GetMap request in the
-   developer toolbar and select it. Explore the right hand sided information panel
-   and find the `Response Headers` section. In this you should find the headers
-   looking similar the following ones:
+* Go to `Tile Caching` &#10093; `Tile Layers`.
+* Find the layer `momo:countries` and select `momo-4326 / png` under `Preview`.
+
+![](../../assets/gwc_open_preview.png)
+
+* In the preview window/tab press `F12` to open the browsers **Developer Toolbar**,
+  activate the `Network` tab, select the `Img` subsection and reload the page
+  to record the network activity.
+
+![](../../assets/gwc_dev_toolbar.png)
+
+* Clear the list content with the `Clear` button (![](../../assets/gwc_clear_list_btn.png))
+* Zoom in to a location of your choice, find a WMS GetMap request in the
+  developer toolbar and select it. Explore the right hand sided information panel
+  and find the `Response Headers` section. In this you should find the headers
+  looking similar the following ones:
 ```
 geowebcache-cache-result:HIT
 geowebcache-crs:EPSG:4326

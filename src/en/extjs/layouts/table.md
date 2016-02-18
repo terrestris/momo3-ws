@@ -20,9 +20,9 @@ config and start adding panels in their natural order from left to right, top
 to bottom. The layout will automatically figure out, based on the column count,
 rowspans and colspans, how to position each panel within the table.
 
-> *Note:* Just like with HTML tables, your `rowspans` and `colspans` must add
-          up correctly in your overall layout or you'll end up with missing
-          and/or extra cells!
+> **Note** Just like with HTML tables, your `rowspans` and `colspans` must add
+           up correctly in your overall layout or you'll end up with missing
+           and/or extra cells!
 
 ## Exercise
 

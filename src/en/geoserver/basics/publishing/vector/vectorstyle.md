@@ -10,8 +10,8 @@ this topic in greater detail.
 
 ## Create and assign a style to a layer
 
-1. Go to `Data` &#10093; `Styles` &#10093; `Add a new style`
-2. Create a new style as follows:
+* Go to `Data` &#10093; `Styles` &#10093; `Add a new style`
+* Create a new style as follows:
     * *Name:* countries
     * *Workspace:* momo
     * *Format:* SLD
@@ -74,21 +74,21 @@ this topic in greater detail.
 </sld:StyledLayerDescriptor>
 ```
 
-3. Go to `Data` &#10093; `Layers`, search for `countries` and select it in the list.
+* Go to `Data` &#10093; `Layers`, search for `countries` and select it in the list.
 
-![Select a layer.](../../../assets/select_layer.png)
+![](../../../assets/select_layer.png)
 
-4. Go to tab `Publishing`.
+* Go to tab `Publishing`.
 
-![Publishing tab](../../../assets/publishing_tab.png)
+![](../../../assets/publishing_tab.png)
 
-5. Select `momo:countries` in dropdown list `Default Style`.
+* Select `momo:countries` in dropdown list `Default Style`.
 
-![Select the default style](../../../assets/select_default_style.png)
+![](../../../assets/select_default_style.png)
 
-6. Click `Save`.
-7. Open the layer preview for the layer `countries` and you will see that the
-   layer will have a new appearance (light grey polygon fill) including labels
-   for each country.
+* Click `Save`.
+* Open the layer preview for the layer `countries` and you will see that the
+  layer will have a new appearance (light grey polygon fill) including labels
+  for each country.
 
 ![Layer preview centered to mongolia.](../../../assets/preview_vector_layer_style.png)

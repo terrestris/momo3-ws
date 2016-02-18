@@ -3,9 +3,9 @@
 You just published the layer with GeoServer! Now let's see how it looks by using
 the `Layer Preview`.
 
-1. Navigate to `Data` &#10093; `Layer Preview`
-2. Search for `countries`.
-3. Click `OpenLayers`.
+* Navigate to `Data` &#10093; `Layer Preview`
+* Search for `countries`.
+* Click `OpenLayers`.
 
 ![Layer Preview](../../../assets/layer_preview.png)
 
@@ -14,12 +14,12 @@ the `Layer Preview`.
 As you published the layer `countries` GeoServer not only serves this layer as
 WMS, in addition it automatically publishes the feature type via its WFS server.
 
-1. Return to the `Layer Preview` site and search for `countries` (see steps 1.
-   and 2. ahead).
-2. Select a WFS format (e.g. the common format `GeoJSON`) in the dropdown
-   menu `All formats`.
+* Return to the `Layer Preview` site and search for `countries` (see steps 1.
+  and 2. ahead).
+* Select a WFS format (e.g. the common format `GeoJSON`) in the dropdown
+  menu `All formats`.
 
-![WFS Preview](../../../assets/preview_vector_layer_wfs.png)
+  ![WFS Preview](../../../assets/preview_vector_layer_wfs.png)
 
 After selecting the entry you should see a new browser tab or window containing
 the GeoJSON representation of the layer `countries` similar to following excerpt:
