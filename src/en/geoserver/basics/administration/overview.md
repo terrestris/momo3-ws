@@ -32,7 +32,7 @@ Log in into GeoServer by using the default administration credentials from above
 
 ![GeoServer welcome page](../../assets/welcome_page_login.png)
 
-After logging in, many more options will be displayed.
+After the login, many more options will be displayed.
 
 ## Basic layout
 
