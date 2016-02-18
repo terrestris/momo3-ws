@@ -98,8 +98,8 @@ $ curl \
             <port>5432</port>
             <database>db_momo_ws</database>
             <schema>geodata</schema>
-            <user>momo-ws</user>
-            <passwd>momo-ws</passwd>
+            <user>momo</user>
+            <passwd>momo</passwd>
             <dbtype>postgis</dbtype>
           </connectionParameters>
         </dataStore>" \
@@ -181,8 +181,8 @@ $ cd ~
 $ nano countries-style.sld
 ```
 * Copy the linked SLD content ([see here](../../basics/publishing/vector/vectorstyle.md))
-  the newly created file and save it with `Strg + O`. You can now close the
-  nano editor with `Strg + X`.
+  the newly created file and save it with `Ctrl + O`. You can now close the
+  nano editor with `Ctrl + X`.
 
 We will now create the style and upload the SLD file we just created.
 
