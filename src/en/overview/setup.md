@@ -63,6 +63,8 @@ $ sudo apt-get autoremove
 $ sudo apt-get -y update && sudo apt-get -y upgrade
 ```
 
+* In case you didn't receive a bootable USB with the above system, you can grab an image under the following URL: http://files.terrestris.de/momo-master.tar.gz This file is roughly 2.2 GB big, and once it is decompressed it will have a size of 16GB.
+
 * Data used in the workshop:
     * Natural Earth Large scale data, 1:10m
         * Cultural
