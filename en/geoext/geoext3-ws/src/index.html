@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Configure a new gridset | MoMo workshop</title>
+        <title>GeoExt | MoMo workshop</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -65,10 +65,10 @@
         
     
     
-    <link rel="next" href="../../../geoserver/advanced/gwc/cachelayer.html" />
+    <link rel="next" href="../../../geoext/geoext3-ws/src/meta/intro.html" />
     
     
-    <link rel="prev" href="../../../geoserver/advanced/gwc/prerequisites.html" />
+    <link rel="prev" href="../../../extjs/events/change.html" />
     
 
         
@@ -77,9 +77,9 @@
         <script src="../../../gitbook/plugins/gitbook-plugin-exercises-tmp-fixed-6/jsrepl/jsrepl.js" id="jsrepl-script"></script>
         
     <div class="book"
-        data-level="2.2.2.2"
-        data-chapter-title="Configure a new gridset"
-        data-filepath="geoserver/advanced/gwc/gridset.md"
+        data-level="6"
+        data-chapter-title="GeoExt"
+        data-filepath="geoext/geoext3-ws/src/README.md"
         data-basepath="../../.."
         data-revision="Thu Feb 18 2016 11:27:02 GMT+0000 (UTC)"
         data-innerlanguage="en">
@@ -804,7 +804,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.2.2" data-path="geoserver/advanced/gwc/gridset.html">
+        <li class="chapter " data-level="2.2.2.2" data-path="geoserver/advanced/gwc/gridset.html">
             
                 
                     <a href="../../../geoserver/advanced/gwc/gridset.html">
@@ -2361,7 +2361,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="geoext/geoext3-ws/src/index.html">
+        <li class="chapter active" data-level="6" data-path="geoext/geoext3-ws/src/index.html">
             
                 
                     <a href="../../../geoext/geoext3-ws/src/index.html">
@@ -2933,67 +2933,26 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="tiles-and-gridsets">Tiles and gridsets</h1>
-<h2 id="tiles">Tiles</h2>
-<p>GeoWebCache caches images retrieved from a WMS. The smallest unit of image
-cached is known as a tile. All tiles are assumed to be the same dimensions and
-are typically square (i.e. 256 pixels by 256 pixels). The tiles are stored in a
-rectangular grid, indexed by (x,y) coordinates. A z coordinate (zero-indexed) is
-used to denote the zoom level, resulting in each tile being indexed as a
-triplet (x,y,z).</p>
-<h2 id="gridsets">Gridsets</h2>
-<p>Gridsets and gridsubsets refer to the spatial reference system of the layers
-served by GeoWebCache. When GeoWebCache makes a request to a WMS, it uses the
-gridset and gridsubset information to convert its internal tile index to a
-spatial request that the WMS will understand.</p>
-<figure id="fig2.2.2.2.1"><img src="../../assets/gwc_gridset_pyramids.png" alt="Composition of a gridset, source: http://3.bp.blogspot.com/_0_xIiXP5xuY/S5pEpCjenaI/AAAAAAAAAKY/PDKTGZ6vzGI/s1600-h/Image_Pyramid.gif"><figcaption>Composition of a gridset, source: http://3.bp.blogspot.com/_0_xIiXP5xuY/S5pEpCjenaI/AAAAAAAAAKY/PDKTGZ6vzGI/s1600-h/Image_Pyramid.gif</figcaption></figure>
-<p>A gridset is a global definition (i.e. not layer-specific) specifying:</p>
+                        <h1 id="geoext3-workshop">GeoExt3 workshop</h1>
+<p><img src="gx-logo-plain.png" alt=""></p>
+<p>Welcome to the GeoExt3 workshop, in which you&apos;ll learn how to use GeoExt3 in
+your ExtJS applications.</p>
+<p>This workshop is composed out of several modules, which usually are done in
+order.</p>
 <ul>
-<li>A spatial reference system.</li>
-<li>A bounding box describing the extent, typically the maximum extent for the
-  above reference system.</li>
-<li>One of either a list of scale denominators, resolutions, or zoom levels.</li>
-<li>The tile dimensions in pixels (constant for all zoom levels).</li>
-</ul>
-<p>A gridsubset is a layer-specific definition specifying:</p>
-<ul>
-<li>The gridset for the layer.</li>
-<li>(Optional) The bounding box for that layer (which must be a subset of the
-  extent of the gridSet).</li>
-<li>(Optional) A list of zoom levels (which must be a subset of what is defined
-  in the gridSet).</li>
-</ul>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> For further instructions have a look at the source of the above
-           explanations, <a href="http://geowebcache.org/docs/1.6.0/concepts/index.html" target="_blank">here</a>.</p>
-</blockquote>
-<h2 id="configure-a-new-gridset">Configure a new gridset</h2>
-<p>So, our first step will be to create a new gridset:</p>
-<ul>
-<li>Go to <code>Tile Caching</code> &#x276D; <code>Gridsets</code></li>
-</ul>
-<p><img src="../../assets/gwc_gridsets.png" alt=""></p>
-<ul>
-<li>Click <code>Create a new gridset</code> to create a new gridset and use the following
-  options for the creation:<ul>
-<li><em>Name:</em> momo-4326</li>
-<li><em>Coordinate Reference System:</em> Use the find-button to select <code>EPSG:4326</code></li>
-<li><em>Gridset bounds:</em> Click <code>Compute from maximum extent of CRS</code></li>
-<li><em>Tile width in pixels:</em> 512</li>
-<li><em>Tile height in pixels:</em> 512</li>
-<li><em>Define grids based on:</em> Select <code>Scale denominators</code></li>
-</ul>
-</li>
-<li>Click <code>Add zoom level</code> to create a new zoom level. Enter the scale <code>300.000.000</code>
-  and the name <code>0</code>.</li>
-<li>Once again click <code>Add zoom level</code>. You will see that the scale value is
-  automatically cut into halves (<code>150.000.000</code>). Just enter the name <code>1</code> and
-  repeat this step until you reached a total count of 8 zoom levels. The last
-  scale value should be <code>2.343.750</code>.</li>
-</ul>
-<p><img src="../../assets/gwc_new_gridset.png" alt=""></p>
-<ul>
-<li>Click <code>Save</code>.</li>
+<li>Before diving into programming, the <a href="meta/intro.html">metainformation</a>
+  chapter has a lot of information about this workshop, the intended audience
+  and how to best create solutions for the workshop.</li>
+<li>Afterwards we&apos;ll work through the <a href="first-steps/intro.html">first steps</a> chapter, in
+  which you learn about Openlayers, ExtJS and GeoExt3.</li>
+<li>Now that we know these libraries and frameworks, we are ready to use the
+  <code>GeoExt.component.Map</code> in the <a href="map-component/intro.html">map</a> chapter.</li>
+<li>Your map may very well contain a lot of layers, these can be managed with a
+  <a href="layer-tree/intro.html">layer tree</a>.</li>
+<li>The next chapter is all about <a href="feature-grid/intro.html">vector features</a>,
+  you&apos;ll create a grid that is synced with a vector layer in the map.</li>
+<li>The last chapter shows <a href="other/intro.html">other aspects</a> of GeoExt components
+  like popups, an embeddable overview map, the utility classes to talk to MapFish print servers and other parts of GeoExt.</li>
 </ul>
 
                     
@@ -3005,10 +2964,10 @@ spatial request that the WMS will understand.</p>
         </div>
 
         
-        <a href="../../../geoserver/advanced/gwc/prerequisites.html" class="navigation navigation-prev " aria-label="Previous page: Prerequisites"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../extjs/events/change.html" class="navigation navigation-prev " aria-label="Previous page: Event change"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../geoserver/advanced/gwc/cachelayer.html" class="navigation navigation-next " aria-label="Next page: Configure a cached layer"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../geoext/geoext3-ws/src/meta/intro.html" class="navigation navigation-next " aria-label="Next page: Metainformation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
