@@ -81,7 +81,7 @@
         data-chapter-title="Create a feature grid"
         data-filepath="geoext/geoext3-ws/src/feature-grid/create.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 14:02:04 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 09:11:23 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2957,7 +2957,7 @@
 <p>Now it&apos;s time to change the grid to no longer show static data from <a href="https://en.wikipedia.org/wiki/The_Simpsons" target="_blank">The Simpsons</a>, but instead one row for every feature of the vector layer.</p>
 <h2 id="exercises">Exercises</h2>
 <ul>
-<li>Please setup <code>src/map.html</code> to contain the following lines:</li>
+<li>Please set up <code>src/map.html</code> to contain the following lines:</li>
 </ul>
 <pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
@@ -3082,8 +3082,8 @@ Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</spa
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
 <ul>
-<li>Instead of a generic <code>Ext.data.Store</code>, use a <code>GeoExt.data.store.Features</code>. Look up the API documentation on <a href="http://geoext.github.io/geoext3/master/docs" target="_blank">http://geoext.github.io/geoext3/master/docs</a></li>
-<li>Make sure that you reference your vector layer and the map to work on when configuring the store.</li>
+<li>Instead of a generic <code>Ext.data.Store</code>, use a <code>GeoExt.data.store.Features</code>. Look up the API documentation on <a href="http://geoext.github.io/geoext3/master/docs" target="_blank">http://geoext.github.io/geoext3/master/docs</a> for further details.</li>
+<li>Make sure you reference your vector layer and the map to work on when configuring the store.</li>
 <li><button class="section" target="hint1" show="Show hint" hide="Hide hint"></button>
 
 </li>
@@ -3117,7 +3117,7 @@ columns: [
 </code></pre>
 <ul>
 <li>When a row is selected in the grid, it is visually highlighted. Wouldn&apos;t it be nice if the feature on the map would also have a different style once its associated row is selected?</li>
-<li>Assign a <code>selectionchange</code> listener on the grid and ensure that the correct feature is highlighted in the map. Hint: Create a new style, and in the callback reset the style for every feature and reassign the new style to the to the currently selected feature. Use <code>console.log(arguments)</code> to see what you have been passed and how you can get the feature from the passed arguments.</li>
+<li>Assign a <code>selectionchange</code> listener on the grid and ensure that the correct feature is highlighted in the map. Hint: Create a new style and in the callback reset the style for every feature and reassign the new style to the to the currently selected feature. Use <code>console.log(arguments)</code> to see what you have been passed and how you can get the feature from the passed arguments.</li>
 <li><strong>Bonus:</strong> Once the feature has a different style on the map, it would be nice if we could see that style in the grid, right? Change the <code>selectionchange</code> listener to also update the grid once the style of the feature has changed.</li>
 <li><button class="section" target="hint3" show="Show hint" hide="Hide hint"></button>
 

@@ -81,7 +81,7 @@
         data-chapter-title="Basic example"
         data-filepath="geoext/geoext3-ws/src/map-component/basic-example.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 14:02:04 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 09:11:23 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2957,11 +2957,10 @@
 <p>We want to have a look at a fully working example first.</p>
 <h2 id="exercises">Exercises</h2>
 <ul>
-<li>Create a new file <code>map.html</code> in the <code>src/exercise</code>-directory</li>
-<li>Paste the following html-code into the file you have just created</li>
-</ul>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<li>Create a new file <code>map.html</code> in the <code>src/exercise</code>-directory.</li>
+<li><p>Paste the following html-code into the file you have just created:</p>
+<pre><code class="lang-html">  <span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Exercise | GeoExt Workshop<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
@@ -2973,8 +2972,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
-<span class="hljs-keyword">var</span> map;
-Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-keyword">var</span> map;
+  Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
     <span class="hljs-comment">// 1) OpenLayers</span>
     <span class="hljs-comment">//</span>
     <span class="hljs-comment">// Create an instance of an OpenLayers map:</span>
@@ -3004,16 +3003,16 @@ Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</spa
         layout: <span class="hljs-string">&apos;fit&apos;</span>,
         items: mapComponent
     });
-});
+  });
         </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
-<ul>
+</li>
 <li>Verify that /map.html loads in your browser and looks like the picture below.</li>
 </ul>
 <figure id="fig6.3.1.1"><img src="map.png" alt="A map component in a fullscreen viewport"><figcaption>A map component in a fullscreen viewport</figcaption></figure>
-<p>We will now <a href="dissecting-example.html">dissect the example</a> and explain what part does.</p>
+<p>We will now <a href="dissecting-example.html">dissect the example</a> and explain what each part does.</p>
 
                     
                     </section>

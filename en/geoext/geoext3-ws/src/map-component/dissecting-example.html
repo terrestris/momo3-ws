@@ -81,7 +81,7 @@
         data-chapter-title="Dissecting the example"
         data-filepath="geoext/geoext3-ws/src/map-component/dissecting-example.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 14:02:04 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 09:11:23 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -3009,7 +3009,7 @@
 <p>The first line in the example reads:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> map;
 </code></pre>
-<p>This creates a global variable named map, which (at this point) has the value <code>undefined</code>. We will later store our instance of the <code>ol.Map</code> in that variable. We have made it global to allow for easier debugging (e.g. in the developer tools of your browser). For the workshop it is OK to create a lot of global variables for stuff you want to examine later on; in production sites it <a href="http://programmers.stackexchange.com/a/277283" target="_blank">usually frowned upon</a>.</p>
+<p>This creates a global variable named map, which (at this point) has the value <code>undefined</code>. Later on we will store our instance of the <code>ol.Map</code> in that variable. We have made it global to allow for easier debugging (e.g. in the developer tools of your browser). For the workshop it is OK to create a lot of global variables for stuff you want to examine later on; in production sites it <a href="http://programmers.stackexchange.com/a/277283" target="_blank">usually frowned upon</a>.</p>
 <h3 id="passing-a-function-to-extonready">Passing a function to <code>Ext.onReady</code></h3>
 <p>The next line reads:</p>
 <pre><code class="lang-js">Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
@@ -3017,8 +3017,8 @@
 });
 </code></pre>
 <p>These lines pass an anonymous (e.g. unnamed) function to the method <code>Ext.onReady</code>. This method will execute the passed function as soon as the Document is ready, e.g. External resources have loaded and the DOM (Document Object Model) of the page is ready to be manipulated.</p>
-<p>behind the curtains, when we create instances of Some Ext classes, they will eventually need to modify the DOM. In order to run into problems when such changes happen to early (remember, all code in the <code>&amp;lt;script&amp;gt;</code> tag is executed as soon as it is being read), we wrap the real code to actually create ExtJS components into a function. We then simply tell ExtJS to delay the real work to a later time, when everything is ready.</p>
-<p>Let&apos;s have a look now at the parts inside this function.</p>
+<p>Behind the curtains, when we create instances of some Ext classes, they will eventually need to modify the DOM. In order to run into problems when such changes happen to early (remember, all code in the <code>&amp;lt;script&amp;gt;</code> tag is executed as soon as it is being read), we wrap the real code to actually create ExtJS components into a function. We then simply tell ExtJS to delay the real work to a later time, when everything is ready.</p>
+<p>Let&apos;s have a look at the parts inside this function.</p>
 <h3 id="creating-an-olmap">Creating an <code>ol.Map</code></h3>
 <p>First we want to create an instance of an <code>ol.Map</code>:</p>
 <pre><code class="lang-js">map = <span class="hljs-keyword">new</span> ol.Map({
@@ -3033,7 +3033,7 @@
     })
 });
 </code></pre>
-<p>These lines create an OpenLayers map, and configure it with a view that is centered on Ulan Bator and that has one layer showing pre-rendered tiles from the <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap project</a>.</p>
+<p>These lines create an OpenLayers map and configure it with a view that is centered on Ulan Bator and that has one layer showing pre-rendered tiles from the <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap project</a>.</p>
 <p>You should already be slightly familiar with OpenLayers and can basically use any map that works without GeoExt.</p>
 <p>Since we did not write <code>var map = &#x2026;</code>, the assignment will happen to the global variable map, that we declared in the first line of the <code>script</code>-tag. You can easily debug the OpenLayers map this way.</p>
 <h3 id="creating-a-geoextcomponentmap">Creating a <code>GeoExt.component.Map</code></h3>
@@ -3048,13 +3048,13 @@
 </blockquote>
 <p>After these lines have executed, we now have two variables, one holding the plain OpenLayers map (<code>map</code>), and one that is named <code>mapComponent</code> which contains an instance of a GeoExt class; and this instance knows about the OpenLayers map.</p>
 <h3 id="creating-a-extviewport">Creating a <code>Ext.Viewport</code></h3>
-<p>The final for lines in the block read:</p>
+<p>The final four lines in the block read:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> vp = Ext.create(<span class="hljs-string">&apos;Ext.container.Viewport&apos;</span>, {
     layout: <span class="hljs-string">&apos;fit&apos;</span>,
     items: mapComponent
 });
 </code></pre>
-<p>Here again we use <code>Ext.create</code> to build an instance of a class, this time of the <code>Ext.container.Viewport</code> class. From the ExtJS API docs:</p>
+<p>Again we use <code>Ext.create</code> to build an instance of a class, this time of the <code>Ext.container.Viewport</code> class. From the ExtJS API docs:</p>
 <blockquote>
 <p>A specialized container representing the viewable application area (the browser viewport).</p>
 <p>The Viewport renders itself to the document body, and automatically sizes itself to the size of the browser viewport and manages window resizing. There may only be one Viewport created in a page.</p>

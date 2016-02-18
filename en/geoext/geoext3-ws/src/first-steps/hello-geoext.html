@@ -81,7 +81,7 @@
         data-chapter-title="Hello GeoExt"
         data-filepath="geoext/geoext3-ws/src/first-steps/hello-geoext.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 14:02:04 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 09:11:23 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2999,24 +2999,24 @@
 <ul>
 <li>We are now going to create an instance of <code>GeoExt.component.Map</code> and render it in the window we created in the previous example.</li>
 <li>In order to do that:<ul>
-<li>remove the <code>html: &amp;#39;&#x2026;is easy!&amp;#39;</code> from the <code>Ext.window.Window</code> configuration object</li>
-<li>instead add the following lines:<pre><code class="lang-undefined">  // in the config object:
-  layout: &apos;fit&apos;,
+<li>Remove the <code>html: &amp;#39;&#x2026;is easy!&amp;#39;</code> from the <code>Ext.window.Window</code> configuration object</li>
+<li>And add the following lines instead:<pre><code class="lang-javascript">  <span class="hljs-comment">// in the config object:</span>
+  layout: <span class="hljs-string">&apos;fit&apos;</span>,
   items: [
-   Ext.create(&apos;GeoExt.component.Map&apos;, {
-     map: new ol.Map({
-       target: &apos;map&apos;,
-       layers: [
-         new ol.layer.Tile({
-           source: new ol.source.OSM()
-         })
-       ],
-       view: new ol.View({
-         center: ol.proj.fromLonLat([106.92, 47.92]),
-         zoom: 4
-       })
-     })
-   })
+      Ext.create(<span class="hljs-string">&apos;GeoExt.component.Map&apos;</span>, {
+          map: <span class="hljs-keyword">new</span> ol.Map({
+              target: <span class="hljs-string">&apos;map&apos;</span>,
+              layers: [
+                  <span class="hljs-keyword">new</span> ol.layer.Tile({
+                      source: <span class="hljs-keyword">new</span> ol.source.OSM()
+                  })
+              ],
+              view: <span class="hljs-keyword">new</span> ol.View({
+                  center: ol.proj.fromLonLat([<span class="hljs-number">106.92</span>, <span class="hljs-number">47.92</span>]),
+                  zoom: <span class="hljs-number">4</span>
+              })
+          })
+      })
   ]
 </code></pre>
 </li>

@@ -81,7 +81,7 @@
         data-chapter-title="Overview map"
         data-filepath="geoext/geoext3-ws/src/other/overview-map.md"
         data-basepath="../../../.."
-        data-revision="Wed Feb 17 2016 14:02:04 GMT+0000 (UTC)"
+        data-revision="Thu Feb 18 2016 09:11:23 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -2954,10 +2954,10 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="overview-map">Overview map</h1>
-<p>Especially when zoomed in, it can be hard to understand the extent of the mappanel. Overview-maps, which show the extent of the main map on a more zoomed out version of the map can be very useful then. GeoExt comes with a useful component to create overviews: <code>GeoExt.component.OverviewMap</code>.</p>
+<p>Especially when zoomed in, it can be hard to understand the extent of the mappanel. Overview-maps, which show the extent of the main map on a smaller scale can be very useful then. GeoExt comes with a useful component to create overviews: <code>GeoExt.component.OverviewMap</code>.</p>
 <h2 id="exercises">Exercises</h2>
 <ul>
-<li>We&apos;ll again start with the code of <code>map.html</code> from the previous sections. It&apos;s already some lines long:</li>
+<li>We&apos;ll start again with the code of <code>map.html</code> from the previous sections. It&apos;s already some lines long:</li>
 </ul>
 <pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
@@ -3177,11 +3177,11 @@ Ext.onReady(<span class="hljs-function"><span class="hljs-keyword">function</spa
 });
 </code></pre>
 <ul>
-<li>If we now specify <code>flex: 1</code> for the <code>layerTreePanel</code> (the <code>region</code>-property is no longer needed), your application should look like this:</li>
+<li>If we specify <code>flex: 1</code> for the <code>layerTreePanel</code> (the <code>region</code>-property is no longer needed), your application should look like this:</li>
 </ul>
 <figure id="fig6.6.2.2"><img src="overview-prepared.png" alt="The prepared layout"><figcaption>The prepared layout</figcaption></figure>
 <ul>
-<li>Now it is time to use <code>GeoExt.component.OverviewMap</code>: Create an instance of this class and read the <a href="http://geoext.github.io/geoext3/master/docs/#!/api/GeoExt.component.OverviewMap" target="_blank">related API-docs</a>. Store the overviewmap in the</li>
+<li>Now it is time to use <code>GeoExt.component.OverviewMap</code>: Create an instance of this class and read the <a href="http://geoext.github.io/geoext3/master/docs/#!/api/GeoExt.component.OverviewMap" target="_blank">related API-docs</a>.</li>
 <li>Configure the <code>overviewPanel</code> with the created overview instead of <code>html: &amp;#39;TODO&amp;#39;</code> (via <code>items</code>).</li>
 <li>You may want to have another layer in the overview. How about this WMS?</li>
 </ul>
